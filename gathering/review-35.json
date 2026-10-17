@@ -1,0 +1,25 @@
+{
+  "wall_dimensions": [
+    1254,
+    1254
+  ],
+  "wall_format": "RGB PNG",
+  "preview_dimensions": [
+    512,
+    512
+  ],
+  "preview_format": "JPEG",
+  "wall_sha256": "a32258ddc7c87486b71d4fcf5170171d79af50cec0e9fa7a36c28463f9b46aae",
+  "image_method": "Built-in imagegen generated transparent earth pigment; Node alpha compositing added it on bare inherited stone while preserving all other pixels. No Python image editing.",
+  "prompt_description": "One simple prehistoric ochre carrying pouch or low vessel, bound with a wobbly charcoal line and two red ochre tails, one blank chalk-white pebble seal. Flat rough worn mineral pigment on transparent background. No scene, rock, writing, digits, logos, borders, hands, humans or frogs; preserve the existing cave paintings during compositing.",
+  "visual_review": "Inspected the full finished wall: the new pouch occupies bare upper-left stone between the old crescent and central arch. Inherited Pepe, wide mouth and heavy-lidded eyes remain. Counted five digits on each inherited hand: four fingers and one thumb. No new handprint. No letters, numbers, captions, signature, watermark, logos, borders, frames, real people, political or hateful symbols visible.",
+  "visual_requirements_unmet": [],
+  "limitations": [
+    "Inherited rock retains its supplied photographic texture.",
+    "Fine pigment detail is softened in the 512-pixel JPEG.",
+    "Local visual inspection and preservation checks are not independent certification."
+  ],
+  "preservation": "9502 changed pixels within [298,128,150,100]; zero outside. Previous wall SHA-256 matches gathering record 34.",
+  "first_gathering": false,
+  "record_number": 35
+}

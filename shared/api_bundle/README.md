@@ -2,11 +2,42 @@
 
 Compare OpenAPI descriptions inside untrusted ZIPs without extracting or executing any member. Python 3.9+ and the standard library only. No installation, line folders, network or accounts are needed.
 
-Current complete comparison: add `--statuses` to include every supported
-analyzer, including response status fallbacks. Try
-`python3 -B shared/api_bundle/status_demo.py` for a fully offline example.
-The current integration suites contain 70 tests. Earlier modes remain available;
+Current complete comparison: add `--fallback-headers` to include every
+supported analyzer, including response headers across status fallbacks. Try
+`python3 -B shared/api_bundle/fallback_demo.py` for a fully offline example.
+The current integration suites contain 80 tests. Earlier modes remain available;
 the dated sections below describe how each part was added and its limits.
+
+Gathering 35 joins line 4's FallbackHeaders with the approved, bounded ZIP
+snapshots from line 2. An exact `200` response can override a general `2XX`
+response and silently omit a required header. This mode checks the headers of
+both effective responses, reusing case folding, references and response-direction
+schema rules. Required-header loss or relaxation is a potential break; optional
+header loss and additions stay reviews. All earlier findings remain. Nothing
+extracts or executes archive content, and no described API endpoint is called.
+
+```sh
+python3 -B shared/api_bundle/api_bundle.py old.zip new.zip --old-sha256 OLD_APPROVED_SHA256 --new-sha256 NEW_APPROVED_SHA256 --fallback-headers
+python3 -B shared/api_bundle/fallback_selftest.py
+```
+
+Python callers use `compare(..., fallback_headers=True)`. This implies the
+status, parameter, server and OAuth analyzers; with several flags, the most
+complete selected mode wins. The new demo reports one potential break and
+three reviews for invented response declarations on a saved public IMD path.
+It compares unchanged inputs cleanly. Ten integration tests exercise digest,
+CRC, cancellation and inventory refusals before analysis, header cases,
+references, schema direction, grouping, inherited findings, determinism, resource
+limits and all four CLI exits. All 80 tests and five demos also pass from a copy
+containing only this shared folder. `SOURCES.json` records all 17 modules.
+
+Limits stay conservative: common inline top-level operations, HTTP 100–599,
+at most 40 common operations, 20,000 status visits and 20,000 header visits,
+plus inherited schema/findings limits. These are cooperative analysis bounds,
+not a hard process sandbox. Missing response coverage, links, broad metadata
+and unsupported schema reasoning may still require review. This static analysis
+cannot prove runtime compatibility or publisher trust. `--statuses` keeps its
+previous behavior; the new header analysis is explicitly opt-in.
 
 Gathering 29 adds line 4's OAuthCheck as an optional extension of the existing
 line 2 ZIP gate and line 4 comparison pipeline. Add `--oauth` to compare

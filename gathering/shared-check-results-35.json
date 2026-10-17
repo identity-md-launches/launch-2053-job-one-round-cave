@@ -1,0 +1,80 @@
+{
+  "mode": "in-place",
+  "sources_verified": 17,
+  "tests": 80,
+  "rows": [
+    {
+      "command": "selftest.py",
+      "exit": 0,
+      "passed": true,
+      "unittest_cases": 53,
+      "evidence": "and_anonymous_override) ... ok\ntest_unchanged_with_inert_executable (__main__.BundleTests.test_unchanged_with_inert_executable) ... ok\ntest_uniqueness_cli_break_review_and_error (__main__.BundleTests.test_uniqueness_cli_break_review_and_error) ... ok\ntest_uniqueness_invalid_boolean (__main__.BundleTests.test_uniqueness_invalid_boolean) ... ok\ntest_uniqueness_on_captured_public_api (__main__.BundleTests.test_uniqueness_on_captured_public_api) ... ok\ntest_uniqueness_response_and_openapi30 (__main__.BundleTests.test_uniqueness_response_and_openapi30) ... ok\ntest_wrong_digest_rejected_before_parsing (__main__.BundleTests.test_wrong_digest_rejected_before_parsing) ... ok\ntest_zip_traversal_refused_even_when_unselected (__main__.BundleTests.test_zip_traversal_refused_even_when_unselected) ... ok\n\n----------------------------------------------------------------------\nRan 53 tests in 6.490s\n\nOK\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "parameter_selftest.py",
+      "exit": 0,
+      "passed": true,
+      "unittest_cases": 8,
+      "evidence": "roved_unchanged_capture_and_no_extraction) ... ok\ntest_cli_all_four_exits (__main__.ParameterBundleTests.test_cli_all_four_exits) ... ok\ntest_crc_checks_unselected_file_before_analysis (__main__.ParameterBundleTests.test_crc_checks_unselected_file_before_analysis) ... ok\ntest_defaults_do_not_invent_wire_breakage (__main__.ParameterBundleTests.test_defaults_do_not_invent_wire_breakage) ... ok\ntest_inherited_header_identifier_and_server_findings_survive (__main__.ParameterBundleTests.test_inherited_header_identifier_and_server_findings_survive) ... ok\ntest_invalid_unchanged_parameter_refused (__main__.ParameterBundleTests.test_invalid_unchanged_parameter_refused) ... ok\ntest_wire_change_opt_in_and_exact_location (__main__.ParameterBundleTests.test_wire_change_opt_in_and_exact_location) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.898s\n\nOK\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "status_selftest.py",
+      "exit": 0,
+      "passed": true,
+      "unittest_cases": 9,
+      "evidence": " (__main__.StatusBundleTests.test_default_range_and_removed_override_grouping) ... ok\ntest_explicit_override_is_opt_in_and_keeps_review (__main__.StatusBundleTests.test_explicit_override_is_opt_in_and_keeps_review) ... ok\ntest_local_response_references_and_inherited_findings (__main__.StatusBundleTests.test_local_response_references_and_inherited_findings) ... ok\ntest_response_direction_and_missing_coverage_stay_conservative (__main__.StatusBundleTests.test_response_direction_and_missing_coverage_stay_conservative) ... ok\ntest_status_budget_refuses_whole_comparison (__main__.StatusBundleTests.test_status_budget_refuses_whole_comparison) ... ok\ntest_unchanged_bad_selector_and_remote_reference_refused (__main__.StatusBundleTests.test_unchanged_bad_selector_and_remote_reference_refused) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.928s\n\nOK\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "fallback_selftest.py",
+      "exit": 0,
+      "passed": true,
+      "unittest_cases": 10,
+      "evidence": "valid_headers_refs_and_budgets_refuse_whole_result (__main__.FallbackBundleTests.test_invalid_headers_refs_and_budgets_refuse_whole_result) ... ok\ntest_lost_required_header_is_break_and_keeps_reviews (__main__.FallbackBundleTests.test_lost_required_header_is_break_and_keeps_reviews) ... ok\ntest_optional_and_relaxed_guarantees (__main__.FallbackBundleTests.test_optional_and_relaxed_guarantees) ... ok\ntest_same_selector_keeps_inherited_findings (__main__.FallbackBundleTests.test_same_selector_keeps_inherited_findings) ... ok\ntest_schema_direction_and_local_references (__main__.FallbackBundleTests.test_schema_direction_and_local_references) ... ok\ntest_status_grouping_missing_coverage_and_content_type (__main__.FallbackBundleTests.test_status_grouping_missing_coverage_and_content_type) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.931s\n\nOK\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "demo.py",
+      "exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "evidence": "  \"path\": \"docs/openapi.json\",\n            \"bytes\": 24550,\n            \"sha256\": \"3d810b144f01283192d49a71aa00e99032a4dbdfa81f7f231d0526bc4ca55e13\"\n          }\n        ],\n        \"all_payloads_crc_checked\": true\n      },\n      \"new\": {\n        \"archive_sha256\": \"b383d20cabfa303eac715bb2d3772647eed84cd20badce4e68beb625d249992a\",\n        \"approved_sha256_checked\": true,\n        \"preflight\": {\n          \"entries\": 1,\n          \"directory_bytes\": 63,\n          \"zip64\": false\n        },\n        \"member\": \"docs/openapi.json\",\n        \"member_sha256\": \"ff62404a449c7f263d2dd5345ec38b560648444a182a1ab484fef49ac22c7cba\",\n        \"checked_files\": [\n          {\n            \"path\": \"docs/openapi.json\",\n            \"bytes\": 24549,\n            \"sha256\": \"ff62404a449c7f263d2dd5345ec38b560648444a182a1ab484fef49ac22c7cba\"\n          }\n        ],\n        \"all_payloads_crc_checked\": true\n      }\n    }\n  }\n}\n",
+      "stdout_sha256": "bd4abdfe868a771f3aff347f2f182db18b88a0d194e4539f4b1258f433038a17"
+    },
+    {
+      "command": "server_demo.py",
+      "exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "evidence": "   {\n            \"path\": \"openapi.json\",\n            \"bytes\": 24550,\n            \"sha256\": \"3d810b144f01283192d49a71aa00e99032a4dbdfa81f7f231d0526bc4ca55e13\"\n          }\n        ],\n        \"all_payloads_crc_checked\": true\n      },\n      \"new\": {\n        \"archive_sha256\": \"a1b93f546850be467605f023eeb0e683504d54553f998f278540babf18930987\",\n        \"approved_sha256_checked\": true,\n        \"preflight\": {\n          \"entries\": 1,\n          \"directory_bytes\": 58,\n          \"zip64\": false\n        },\n        \"member\": \"openapi.json\",\n        \"member_sha256\": \"4185291e36da1e951ca2d41d921ab74bcb5916bc44b13d6452b189fad2b82336\",\n        \"checked_files\": [\n          {\n            \"path\": \"openapi.json\",\n            \"bytes\": 24608,\n            \"sha256\": \"4185291e36da1e951ca2d41d921ab74bcb5916bc44b13d6452b189fad2b82336\"\n          }\n        ],\n        \"all_payloads_crc_checked\": true\n      }\n    }\n  }\n}\n",
+      "stdout_sha256": "2535b5dd09d90bbffec65d9ed842207cc0efd30e4cd0f53eb614b0ea2c791d7d"
+    },
+    {
+      "command": "parameter_demo.py",
+      "exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "evidence": "  \"path\": \"docs/openapi.json\",\n            \"bytes\": 24697,\n            \"sha256\": \"034a7edb5e00906272541b117037e6a20cc799e78588848804f3d88ba861dd8c\"\n          }\n        ],\n        \"all_payloads_crc_checked\": true\n      },\n      \"new\": {\n        \"archive_sha256\": \"219211b40edbd987f7373f22ff96693b1e1c98378255942861c13f90d529e544\",\n        \"approved_sha256_checked\": true,\n        \"preflight\": {\n          \"entries\": 1,\n          \"directory_bytes\": 63,\n          \"zip64\": false\n        },\n        \"member\": \"docs/openapi.json\",\n        \"member_sha256\": \"ebb8f94e195917f4d70df55f87216a06d190b69259b341af6f21f1da6fadff90\",\n        \"checked_files\": [\n          {\n            \"path\": \"docs/openapi.json\",\n            \"bytes\": 24698,\n            \"sha256\": \"ebb8f94e195917f4d70df55f87216a06d190b69259b341af6f21f1da6fadff90\"\n          }\n        ],\n        \"all_payloads_crc_checked\": true\n      }\n    }\n  }\n}\n",
+      "stdout_sha256": "e9b64e3970d366c58ec6ba56e49b316a23bf768e50235e3e94a83453b575b1d0"
+    },
+    {
+      "command": "status_demo.py",
+      "exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "evidence": "  \"path\": \"docs/openapi.json\",\n            \"bytes\": 22326,\n            \"sha256\": \"dab31af92f459a14645292b9753bc0f7cbd7c82f0f8f2712d9bcf6885f495320\"\n          }\n        ],\n        \"all_payloads_crc_checked\": true\n      },\n      \"new\": {\n        \"archive_sha256\": \"820256dd32afa8e8234c13ed74edaf2c11cd603ce965d9b7b275adb1924067c5\",\n        \"approved_sha256_checked\": true,\n        \"preflight\": {\n          \"entries\": 1,\n          \"directory_bytes\": 63,\n          \"zip64\": false\n        },\n        \"member\": \"docs/openapi.json\",\n        \"member_sha256\": \"b41315cbbdc6ae2ce5b19d62a1be50261b34e37d5e7ad3c36fc845e7c6c8ffe1\",\n        \"checked_files\": [\n          {\n            \"path\": \"docs/openapi.json\",\n            \"bytes\": 22441,\n            \"sha256\": \"b41315cbbdc6ae2ce5b19d62a1be50261b34e37d5e7ad3c36fc845e7c6c8ffe1\"\n          }\n        ],\n        \"all_payloads_crc_checked\": true\n      }\n    }\n  }\n}\n",
+      "stdout_sha256": "6686245cedce148560f011c827d95d4758a1d60b491557edb8819688d4850736"
+    },
+    {
+      "command": "fallback_demo.py",
+      "exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "evidence": "  \"path\": \"docs/openapi.json\",\n            \"bytes\": 22352,\n            \"sha256\": \"83d445b624ecd2e2c889495e533c8d193f301c3325dd79f382ce842d88297bb7\"\n          }\n        ],\n        \"all_payloads_crc_checked\": true\n      },\n      \"new\": {\n        \"archive_sha256\": \"20b1635370df0c613622285b214ac0273df40f18ec4aee8d41f7a898ae546899\",\n        \"approved_sha256_checked\": true,\n        \"preflight\": {\n          \"entries\": 1,\n          \"directory_bytes\": 63,\n          \"zip64\": false\n        },\n        \"member\": \"docs/openapi.json\",\n        \"member_sha256\": \"36c73d93d47378e82104680b48dbc31498b9ecc006a99de8d454c62359e6e897\",\n        \"checked_files\": [\n          {\n            \"path\": \"docs/openapi.json\",\n            \"bytes\": 22409,\n            \"sha256\": \"36c73d93d47378e82104680b48dbc31498b9ecc006a99de8d454c62359e6e897\"\n          }\n        ],\n        \"all_payloads_crc_checked\": true\n      }\n    }\n  }\n}\n",
+      "stdout_sha256": "e35a5644289c36e7fd45bec15d1de4107a8f3119b45bfb30acc73bae0b94339e"
+    }
+  ],
+  "passed": true
+}

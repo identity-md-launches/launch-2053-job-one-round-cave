@@ -94,5 +94,11 @@
     "source_sha256": "102bf4d3fad5f40feda5b695c083e1def8319366fbca7815df65b5e537ecc64e",
     "sha256": "7431a43149e54e5a8c75596c71aa203bfa6b9bb61cc6edef7f95a41ca5a50022",
     "adaptation": "Sibling ParamCheck import and demo capture paths adjusted for standalone shared layout only; analysis unchanged."
+  },
+  "vendor/fallbackheaders.py": {
+    "source": "line-4/tools/fallbackheaders/fallbackheaders.py",
+    "source_sha256": "fa1e518516c966bcc6fb9ef10a567455f99a707fcffaf13223cd41932a49d6c8",
+    "sha256": "7eab42f163aaa411fed91f4758cb4648e1b86eb58fc7c14fba64b8467cdbd7cf",
+    "adaptation": "Sibling StatusCheck import and demo capture paths adjusted for standalone shared layout only; comparison logic unchanged."
   }
 }

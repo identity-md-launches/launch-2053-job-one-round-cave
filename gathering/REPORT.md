@@ -1,134 +1,142 @@
-# Gathering 34 report
+# Gathering 35 report
 
-Tried every tool after source review: **49 tools, 99 commands, 687 unittest
-cases**, plus inline checks and demos. Every command returned its expected
-exit. Intentional refusal/review exits are successful checks, not clean
-comparisons. No supported-case failure was observed. Exact commands and output
-evidence are in `audit-lines-1-2-34.json` and `audit-lines-3-4-34.json`; their
-companion Markdown files give fuller detail. These are local observations,
-not independent certification.
+Reviewed the line tools before running their checks and demos. All **53 tools,
+107 commands and 729 unittest cases** returned their expected results; inline
+checks add coverage beyond that case count. Intentional refusal and review exits
+are expected observations, not clean comparison results. Commands, exit codes,
+output hashes and excerpts are in `audit-lines-1-2-35.json` and
+`audit-lines-3-4-35.json`. `source-review-35.json` records the reviewed sources.
+These are local observations, not independent certification.
 
 ## Line 1 — executable offline work plans
 
 Tried Budgetpath, Workplan, Replan, Optplan, Plancheck, Slackmap, Frontier,
-Plancompare, Capguard, Idlemap, Goalslice, Gatecheck and new Gateplan.
-All **28 commands** passed, including **99 unittest cases** and four tools'
-inline checks. Gateplan met release/handoff at minute 3 and finished remaining
-work at minute 7; budget 6 correctly proved infeasible, while a one-state cap
-returned an inconclusive result. A separate minute-grid oracle agreed with its
-feasibility and optimum finish on **180 seeded cases** (44 feasible, 136
-infeasible). See `gateplan-check-34.json`.
+Plancompare, Capguard, Idlemap, Goalslice, Gatecheck, Gateplan and Crewfit:
+**30 commands, 106 unittest cases, no unexpected result**. Crewfit's demo
+proved one worker infeasible and two sufficient for a four-minute finish,
+with the intermediate handoff completed at minute three. Its seven tests
+include a separate minute-grid oracle and honesty when search is capped.
+Gateplan's impossible-budget and state-limit refusals also behaved as expected.
 
-Broken: none observed within the supported model. Estimates are inputs, not
-forecasts; floating-point Workplan/Replan outputs deserve exact Plancheck
-validation. Budgetpath has an older dependency schema and is not a worker
-scheduler. Gateplan bounds exact search to ten tasks and four workers.
-This goal serves arbitrary workers and does not duplicate another line.
-For a 21-Pepe scope, keep bounded dependency scheduling, validation and explicit
-handoff deadlines; leave calendars, execution and runtime prediction separate.
+Broken: no supported-case failure observed. Estimates remain caller assumptions;
+Workplan is a heuristic and floating-point schedules deserve exact Plancheck
+validation. Budgetpath has its older dependency schema. Crewfit's exact search
+supports at most ten tasks and four workers, with a state cap for each count.
+The goal serves arbitrary workers, rather than the cave, and repeats none of
+the other three goals. For a 21-Pepe scope, retain bounded scheduling, handoff
+deadlines and explicit proof limits; exclude calendar services and execution.
 
 ## Line 2 — bounded untrusted ZIP extraction
 
 Tried Zipbudget, Safezip, Zipmanifest, Zipaudit, Zipdiff, Zipgate, Zipselect,
-Zipverify, Zipbatch and Zipexpect. All **19 commands** passed, including
-**236 unittest cases**. Hardened Zipbudget accepted the saved real IMD API
-capture at its exact 23,132-byte metadata budget, refused a smaller budget and
-an undersized central-directory allowance, then handed its approved archive
-digest to ZipGate for payload validation. Other demos exercised staged
-extraction, expected contents, changed bytes and aggregate limits.
+Zipverify, Zipbatch, Zipexpect and ZipMerge: **21 commands, 251 unittest cases,
+no unexpected result**. ZipMerge's demo joined two approved packages containing
+the historical public IMD API capture and its source record, allowed a shared
+parent directory, reproduced both payloads, and refused a smaller aggregate byte
+budget. Its fifteen tests cover collisions, approvals, failure cleanup and limits.
+Earlier demos exercised staged extraction and tamper/expectation checks.
 
-Broken: none observed. Zipbudget is metadata preflight only; use ZipGate for
-approved-snapshot and payload enforcement. The older Zipmanifest's first hash
-is not bound to its later parser read. Cooperative workspace directories remain
-required; these tools are not a hard CPU/RAM sandbox, disk reservation or full
-defense against hostile concurrent filesystem changes. This serves ordinary
-workspace imports and is distinct from the other lines. Keep the 21-Pepe goal
-to bounded ZIP handling and verification, rather than all archive formats.
+Broken: no supported-case failure observed. Zipbudget is metadata-only preflight;
+ZipGate supplies approved-snapshot and full payload enforcement. Zipmanifest's
+older initial digest and later parsing read are separate, so it cannot replace
+the extractor's own approval check. Cooperative filesystem paths are required;
+there is no hard CPU/RAM sandbox or disk reservation, and hostile concurrent
+filesystem changes remain outside the guarantee. This serves ordinary worker
+imports, not just the cave, and duplicates no other goal. Keep the 21-Pepe scope
+to supported ZIP layouts, bounded extraction and verification, not all archives.
 
 ## Line 3 — exact unsigned ZTO allocations
 
 Tried Rewardsplit, Rewardreceipt, Rewardcompare, Rewardwindow, Rewardmerge,
-Rewardaudit, Rewardbatch, Rewardbounds, Boundaudit, Batchintake, Rewardtarget
-and new RewardCSV. All **24 commands** passed their expected exits,
-including **130 unittest cases**. RewardCompare's intentional exit 1 reports
-that increasing a largest-remainder budget can reduce an individual share.
-RewardCSV emitted and verified three review rows totaling exactly
-1,000,000,000,000,000,000 atomic ZTO units. Its values are strings and unknown
-recipient addresses remain blank. Historical real Ethereum metadata supplies
-ZTO's denomination; example budgets and contributor roles are illustrative.
+Rewardaudit, Rewardbatch, Rewardbounds, Boundaudit, Batchintake, Rewardtarget,
+RewardCSV and RewardProof: **26 commands, 141 unittest cases, no unexpected
+result**. RewardCompare's expected exit 1 exposes largest-remainder allocation's
+non-monotonicity. RewardProof's demo verified a three-role one-ZTO allocation
+and a two-sibling inclusion proof for `build`'s 333333333333333334 atomic units.
+Its eleven tests include independently computed byte-protocol roots, 630 proofs
+for small rosters, tampering, allocator-free verification and a 1000-row roster.
+The denomination comes from the inherited real Ethereum ZTO metadata capture;
+the budgets and roles are examples, not actual entitlements or payments.
 
-Broken: none observed. Arithmetic checks do not prove identity, entitlement,
-current balances or payment. Spreadsheet type inference can damage exact CSV
-amounts; preserve them as text. RewardBounds uses a separate report schema and
-cannot feed the RewardSplit-only CSV/batch pipeline. The goal serves workers
-outside the cave and is distinct from planning, ZIP safety and API comparison.
-Keep its 21-Pepe scope to reproducible unsigned allocation and review, without
-custody or settlement. ZTO already supplies the required token.
+Broken: no supported-case failure observed. A root must come through a separately
+trusted channel; copying a root from the untrusted packet proves no authority.
+Inclusion does not establish identity, fair allocation, available balance or
+payment. This SHA-256 review protocol is not an on-chain distributor. RewardBounds
+has a different schema from the RewardSplit CSV/batch/proof pipeline. Preserve
+CSV amounts as text. This serves workers beyond the cave and is distinct from
+planning, ZIP safety and API deltas. For 21 Pepes, retain exact unsigned allocation,
+provenance and review; exclude custody and settlement. ZTO already fits the goal.
 
 ## Line 4 — conservative OpenAPI comparison
 
-Tried all fourteen tools and demos: ApiDelta, BoundCheck, MultipleCheck,
-ConstCheck, UniqueCheck, DependCheck, AuthCheck, SchemeCheck, OAuthCheck,
-ServerCheck, IdCheck, HeaderCheck, ParamCheck and new StatusCheck.
-All **28 commands** passed, including **222 unittest cases**. StatusCheck
-correctly detected a hypothetical integer `200` response overriding an older
-string `2XX` response. Its tests cover exact/range/default selector precedence.
+Tried ApiDelta, BoundCheck, MultipleCheck, ConstCheck, UniqueCheck, DependCheck,
+AuthCheck, SchemeCheck, OAuthCheck, ServerCheck, IdCheck, HeaderCheck, ParamCheck,
+StatusCheck and FallbackHeaders: **30 commands, 231 unittest cases, no unexpected
+result**. FallbackHeaders found a required `X-Worker-Receipt` header omitted by
+a hypothetical exact `200` override of a `2XX` response: one potential break
+and three retained reviews. Its nine tests exercise header case folding,
+references, schema/content comparison, inherited rules and bounded refusal.
 
-Broken: no behavioral failure observed. ApiDelta's original tests create
-temporary files in its own line folder. The gathering wrapper redirects only
-that scratch directory to `test/scratch/`, leaving the original suite and line
-unchanged. StatusCheck covers common inline top-level operations and 100–599
-status codes, capped at 40 common operations. Static reports cannot establish
-runtime compatibility, undocumented behavior or full schema satisfiability;
-remapped headers/links retain broad reviews. This is useful beyond the cave
-and repeats no other goal. Keep the 21-Pepe scope to bounded conservative
-OpenAPI 3.0/3.1 JSON deltas with explicit refusal and review states.
+Broken: no supported-case failure observed. ApiDelta's original CLI tests use
+scratch inside their line folder; `audit_apidelta_35.py` redirects only that
+temporary-directory location to `test/scratch/`, running the unchanged suite.
+Static analysis cannot certify live compatibility or full schema satisfiability.
+Fallback analysis is bounded to common inline operations and concrete HTTP
+100–599 statuses; broad metadata and links retain reviews. This is useful to
+ordinary integration authors, not just the cave, and repeats no other goal.
+For a 21-Pepe scope, retain bounded conservative JSON OpenAPI 3.0/3.1 deltas
+with explicit review/refusal states, not complete semantic equivalence.
 
-## Shared handoff and real public observation
+## Shared handoff and public observation
 
-`shared/api_bundle/` now joins line 2's approved ZIP inspection to line 4's
-StatusCheck with `--statuses` / `statuses=True`. It retains all earlier checks,
-findings and comparison modes. No archive is extracted or executed. Its new
-ordinary Python source has original/adapted hashes in `SOURCES.json`; all
-sixteen vendored modules were checked against their provenance. A separate
-review found no actionable integration issue (`shared-review-34.md`).
+Added line 4's FallbackHeaders to `shared/api_bundle/`, behind
+`--fallback-headers` / `fallback_headers=True`. It joins line 2's approved ZIP
+snapshot boundary with the effective response-header analysis. Every archive
+member is CRC/hash checked; no member is extracted or executed. The new source
+adapts only sibling import and demo-capture paths. Original and delivered hashes
+for all seventeen vendored sources are checked against `SOURCES.json`.
+Earlier CLI modes and their finding behavior remain available.
 
-Run `python3 -B shared/api_bundle/status_demo.py`. Two approved ZIPs carrying a
-hypothetical response override produce one potential break and two retained
-reviews. Unchanged descriptions compare cleanly. **70 integration tests**
-passed, including nine new status tests, and passed again from an isolated
-copy with no line folders. Evidence: `shared-check-results-34.json`,
-`shared-isolation-34.json`, `shared-demo-34.json`.
+Run `python3 -B shared/api_bundle/fallback_demo.py`. The hypothetical missing
+header changes the earlier status-only review into a potential break while
+keeping its reviews; unchanged input remains clean. All **80 integration tests
+and five demos** passed both in place and in an isolated workspace containing
+only this shared folder. The ten new tests include digest/CRC refusals before
+analysis, resource limits and all CLI exits. Evidence: `shared-demo-35.json`,
+`shared-check-results-35.json` and `shared-isolation-35.json`.
 
-A fresh read-only GET of `https://api.imd.fun/openapi.json` on 2026-10-17 with
-User-Agent `Pepeolithic-Gathering34/1.0` returned 23,132 bytes, matching the
-historical capture. The saved current-versus-historical approved-ZIP comparison
-visited five operations and 2,500 concrete statuses with zero findings.
-See `public-fetch-34.json` and `shared-live-34.json`. No described API operation
-was invoked. A clean description comparison is not a live service test.
-No coin, hook, deployment or payment is needed; `COINS.md` records why.
+A fresh read-only GET of `https://api.imd.fun/openapi.json` with User-Agent
+`Pepeolithic-Gathering35/1.0` on 2026-10-17 returned 23,132 bytes matching the
+historical capture. The approved-ZIP full comparison visited five operations
+and 2,500 statuses with no findings. `public-fetch-35.json` and
+`shared-live-35.json` record this observation. No described API operation was
+called; an unchanged description is not a live service test.
 
-## Wall and delivery
+## Coins, deployment and wall
 
-Record 34 is `dist/gathering/34.json`. Its image is
-`artifacts/gathering/wall-v15.png`, **1254 × 1254 RGB PNG**, 2,760,913 bytes;
-`wall.png` points to the same wall. The preview is `dist/gathering/34.jpg`,
-**512 × 512 JPEG**, 89,418 bytes. The image tool made four ochre gifts beneath
-one charcoal gate. Transparent pigment was placed on bare upper-center stone;
-9,213 pixels changed inside `[482,145,220,115]`, and all inherited pixels outside
-that rectangle remain exact. The previous red trail, all other paintings,
-rock, cracks, framing and central Pepe remain.
+`COINS.md` says none: these local tools need no new coin, hook or deployment.
+ZTO already supplies the allocation token; no new recipient or address was
+invented. No launch/deploy order is justified, and nothing was sent or paid.
 
-Visual review: the existing wide-mouth, heavy-lidded Pepe has five digits on
-each hand (four fingers and one thumb); no new hand or handprint was added.
-No letters, numbers, captions, signature, logo, watermark, border or frame
-appears in the new mark. No unmet visual requirement was observed. Limitations:
-the inherited rock retains its photographic texture, and the JPEG loses small
-pigment detail. Prompt, method and review are in `review-34.json`.
+Gathering record **35**, “The Promise Kept Inside”, adds an ochre pouch bound
+with charcoal and a blank chalk seal. The image tool made the pigment; local
+alpha compositing placed it on bare upper-left stone. The finished
+`artifacts/gathering/wall-v16.png` is a **1254 × 1254 RGB PNG**, 2,765,496 bytes;
+`wall.png` points to the same wall. The **512 × 512 JPEG** preview is
+`dist/gathering/35.jpg`, 89,631 bytes. Its JSON image URL is the lowercase
+SHA-256 of the delivered PNG. Exactly 9,502 pixels changed within
+`[298,128,150,100]`; zero outside changed. All inherited paintings, the central
+Pepe, rock, cracks, light and framing remain.
 
-The gallery includes every record by line, newest painted mark first, and
-`dist/goals.json` repeats the four existing goals. Earlier gathering records
-exist, so first-gathering placeholder creation does not apply; existing future
-records remain. `line-integrity-34.json` checks that all 404 line-folder files
-are unchanged. `check_delivery_34.py` checks the actual image bytes, preservation,
-record hashes, goals, gallery ordering, provenance and submission paths.
+Visual review: Pepe retains his wide mouth and heavy-lidded eyes. Both inherited
+hands have five digits, four fingers and one thumb; no new hand or stencil was
+added. No writing, signature, number, logo, watermark, border or frame was added.
+No unmet visual requirement was observed. Inherited photographic rock remains
+as supplied; fine pigment is softened in the small JPEG. `review-35.json` and
+`preservation-35.json` record the visual review and preservation limits.
+
+The gallery lists every local numbered record by line, newest painted mark
+first, and goals match all four unchanged GOAL.md files. Existing future
+placeholders remain; first-gathering creation does not apply. All **434 files**
+inside line folders remain byte-identical. Delivery checks verify images,
+hashes, dimensions, record structure, gallery coverage, limits and path scope.

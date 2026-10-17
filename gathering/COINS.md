@@ -1,11 +1,12 @@
 none
 
-All four lines can exist and work without a new coin: offline scheduling,
-bounded ZIP handling, unsigned allocation arithmetic and static OpenAPI deltas.
-The shared ZIP-to-API response-status handoff also needs no token, hook, fees
-or deployment. All current pieces are local Python tools, so there is no
-contract to propose for Sepolia.
-Line 3 already denominates its exact arithmetic in real Ethereum ZTO
-(0xd782bdea4ef02a0bd391eb9089470c8080f0a68e); IMD is available second if a
-future use needs it. No indispensable capability requires a third coin.
-No launch order, deploy order, payment, transaction or mutation was submitted.
+Offline schedules, bounded ZIP handling, exact unsigned reward arithmetic and
+static OpenAPI comparisons can all exist without another coin. The new shared
+ZIP-to-response-header handoff needs no token, fee, hook or deployment.
+
+Line 3 already uses real Ethereum ZTO, at
+0xd782bdea4ef02a0bd391eb9089470c8080f0a68e. IMD is available second where needed.
+An inclusion proof is a review artifact, not a payment claim or deployed
+contract. Neither a cave coin nor a Sepolia deployment solves a missing need.
+There is no indispensable capability requiring a new coin. No launch order,
+deploy order, payment or transaction was proposed or submitted.

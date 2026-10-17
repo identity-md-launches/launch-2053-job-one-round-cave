@@ -1,0 +1,772 @@
+{
+  "sources": [
+    {
+      "path": "line-1/tools/budgetpath/budgetpath.py",
+      "sha256": "2d16764020c0f301eb124ba032eb6fcafd7442c24adee04ef4484b9ece26947d",
+      "lines": 63
+    },
+    {
+      "path": "line-1/tools/capguard/capguard.py",
+      "sha256": "cec4aa9f09a07e9b6c1860bce1a09cab115a241e21ec6704fa70102c5f28b141",
+      "lines": 199
+    },
+    {
+      "path": "line-1/tools/capguard/selftest.py",
+      "sha256": "e97c169314ac19ad6ac631a9d86ad786d6d5126e0f1c333b2da9226290703ed3",
+      "lines": 131
+    },
+    {
+      "path": "line-1/tools/crewfit/crewfit.py",
+      "sha256": "3b27bf9dae40ebb93a44c338eca36f9d95d62636b52319ffb47d35554510d19b",
+      "lines": 113
+    },
+    {
+      "path": "line-1/tools/crewfit/selftest.py",
+      "sha256": "a53561a64cd14b062f850c4b9c86a59a68f1dc5136772d9f1a4caba506cb15e0",
+      "lines": 153
+    },
+    {
+      "path": "line-1/tools/frontier/frontier.py",
+      "sha256": "dafe713aac5f48e9c343d88645bf4de7d8657b2715c4ec9b66bb48ab89f85840",
+      "lines": 125
+    },
+    {
+      "path": "line-1/tools/frontier/selftest.py",
+      "sha256": "d8c03d8bf8f47bae9f88c77f52c87c2f3aeaa85c2e8b53c48ebbf2e7518cb354",
+      "lines": 112
+    },
+    {
+      "path": "line-1/tools/gatecheck/gatecheck.py",
+      "sha256": "5dc452f65db28e3429ead91d18b817118b4a6f58eda6ed2a01e1f023d741f03b",
+      "lines": 217
+    },
+    {
+      "path": "line-1/tools/gateplan/gateplan.py",
+      "sha256": "06f497b284fef71df285a2abed825ecf02a380a0603e91d9b8b956fdc32c09e4",
+      "lines": 205
+    },
+    {
+      "path": "line-1/tools/goalslice/goalslice.py",
+      "sha256": "42927218976f5f79cd01e7fb6b3525d63ca35a1da4befd3c21dbebf926229909",
+      "lines": 134
+    },
+    {
+      "path": "line-1/tools/goalslice/selftest.py",
+      "sha256": "efdff6a9fa6a99b27ad3c5a87b4b36e7e3790b3a0f73e6767917154f2873b2d5",
+      "lines": 130
+    },
+    {
+      "path": "line-1/tools/idlemap/idlemap.py",
+      "sha256": "467ec29c3e2bd811fe9835b8c3c2b28cd86190e6cd3059696f6c2ff4b7159043",
+      "lines": 121
+    },
+    {
+      "path": "line-1/tools/idlemap/selftest.py",
+      "sha256": "6867909932a8436c9992fcb46ce97d649d8a62c869465da2521c16b53373f67c",
+      "lines": 135
+    },
+    {
+      "path": "line-1/tools/optplan/optplan.py",
+      "sha256": "3a142cecd7ea890e7b31e4b56483da4ecbf59d32bd8d0f5bfb1904fde31fbf1a",
+      "lines": 182
+    },
+    {
+      "path": "line-1/tools/optplan/selftest.py",
+      "sha256": "0bf455f4461a4afefae6562ff030823c2f0358aa74542cc61599eb7371c90b3b",
+      "lines": 194
+    },
+    {
+      "path": "line-1/tools/plancheck/plancheck.py",
+      "sha256": "ca0dcc14f120a462419e03a715be3282e88ac12dd3bab58b7cae2e813c6efe9d",
+      "lines": 205
+    },
+    {
+      "path": "line-1/tools/plancheck/selftest.py",
+      "sha256": "87b1d727dbafbe0abfda921836e3fd7ef0d07b8bc4d271271bfd45102e15ecf1",
+      "lines": 192
+    },
+    {
+      "path": "line-1/tools/plancompare/plancompare.py",
+      "sha256": "d576bb97a7c7035136fb74c3a77b343ebaa48808e0a6933a7a346562cf63c39e",
+      "lines": 111
+    },
+    {
+      "path": "line-1/tools/plancompare/selftest.py",
+      "sha256": "f562384d833ff7014457d310d0a94af03b0ebc64a6b8c5b484347be8af76c56b",
+      "lines": 122
+    },
+    {
+      "path": "line-1/tools/replan/replan.py",
+      "sha256": "1b9251f205e834cfa4b8a314e3280b0ce0f9ffa45198d459a3c877767a81c0b2",
+      "lines": 202
+    },
+    {
+      "path": "line-1/tools/replan/selftest.py",
+      "sha256": "36ac05bb6548e62840acdbe55057e3cf765e1f73801220e205c92c1ec4652bc2",
+      "lines": 201
+    },
+    {
+      "path": "line-1/tools/slackmap/selftest.py",
+      "sha256": "16c51130045e314253495549396ab21200d0daf0cbe8ec35d31614e272dbae3e",
+      "lines": 181
+    },
+    {
+      "path": "line-1/tools/slackmap/slackmap.py",
+      "sha256": "bc1b5c2f556dc9c7a2a56348180a04a5ba1ad9bde6b7dbee0d085a9ffb98c704",
+      "lines": 135
+    },
+    {
+      "path": "line-1/tools/workplan/workplan.py",
+      "sha256": "9474f5153a7e9facd5fd444333a336eb5ca0e3bc246e8f3d588fdacd456643ec",
+      "lines": 197
+    },
+    {
+      "path": "line-2/tools/safezip/safezip.py",
+      "sha256": "b30519c0440c15568b0cdbb83e4f466fff7dc01cac16055605264d14ea3a731d",
+      "lines": 271
+    },
+    {
+      "path": "line-2/tools/safezip/selftest.py",
+      "sha256": "0024fff73e12c794f0883b1067abfa6cef9ecc66408b98e426e0b275265a859a",
+      "lines": 509
+    },
+    {
+      "path": "line-2/tools/safezip/swarm_demo.py",
+      "sha256": "62a7e077183de4f78d152b50dadae13ea4311da16530d7673da851c2afe47d89",
+      "lines": 60
+    },
+    {
+      "path": "line-2/tools/zipaudit/demo.py",
+      "sha256": "e6dbe82ebf1ca2ffa09048fb05dcdfbfea55b53e465b2cb42525ca152b3566ae",
+      "lines": 45
+    },
+    {
+      "path": "line-2/tools/zipaudit/selftest.py",
+      "sha256": "c39e7499cc8f2404e2907a0c96fad0cfd57d98acd6a36efe80658de3fa391567",
+      "lines": 161
+    },
+    {
+      "path": "line-2/tools/zipaudit/zipaudit.py",
+      "sha256": "e941f8132279ed26f7612afc23f92068061b2a3bbcffbdb1d4af40eb815b9017",
+      "lines": 119
+    },
+    {
+      "path": "line-2/tools/zipbatch/demo.py",
+      "sha256": "af6c784a42cf7c83a84236e47084a3b4da1bd7dc02aa22ea84c8896b18cbf268",
+      "lines": 51
+    },
+    {
+      "path": "line-2/tools/zipbatch/selftest.py",
+      "sha256": "5017fd30479f6c012b1b06b6bcf1f0430ad46e1b978fa1e5f3fdda618ef51475",
+      "lines": 221
+    },
+    {
+      "path": "line-2/tools/zipbatch/zipbatch.py",
+      "sha256": "905de50176e5dbfb04a93f6fd72b90f7d1fcff0278bacca6a37db04d09e1d156",
+      "lines": 147
+    },
+    {
+      "path": "line-2/tools/zipbudget/demo.py",
+      "sha256": "493baa7ebc04eefbaae86ebacf457029ecefc3358f83d5295e0f32312582ba37",
+      "lines": 44
+    },
+    {
+      "path": "line-2/tools/zipbudget/selftest.py",
+      "sha256": "4674c04df8fb4d7d3282d8aea78dc9b66a60efb6501ee1d0bb7e469fe7e0740b",
+      "lines": 182
+    },
+    {
+      "path": "line-2/tools/zipbudget/zipbudget.py",
+      "sha256": "b48daebb235155cd6f61dc3009492113b2e3076ba834bda87f3469e06fe6589f",
+      "lines": 85
+    },
+    {
+      "path": "line-2/tools/zipdiff/demo.py",
+      "sha256": "d60f77f994f8610270c9151437e0521bae7d9a58ecacb8d1c7f814bb42dc2b18",
+      "lines": 46
+    },
+    {
+      "path": "line-2/tools/zipdiff/selftest.py",
+      "sha256": "84df8c0b63000b8a92eea9520791c018225bd89b967bde9f536f17a900ac1872",
+      "lines": 181
+    },
+    {
+      "path": "line-2/tools/zipdiff/zipdiff.py",
+      "sha256": "30b58eb19ce2f749148ac42f015da8eb1dcdaaca56c4ac5bd40e2f4ba81283fa",
+      "lines": 108
+    },
+    {
+      "path": "line-2/tools/zipexpect/demo.py",
+      "sha256": "10f6b0393d2dc5bc40ef9a87681ee6e810f7e18307a0a8d7ece18cc000ce6f61",
+      "lines": 46
+    },
+    {
+      "path": "line-2/tools/zipexpect/selftest.py",
+      "sha256": "368dd512a52d13679ff45e60273d35fa7bcaffd0ff03e0422ffc756ff68d5ce8",
+      "lines": 204
+    },
+    {
+      "path": "line-2/tools/zipexpect/zipexpect.py",
+      "sha256": "2c0862e12f785d908df773a53aa85d4618bbb3a50ac33cb93ed171d8f3e8c4c0",
+      "lines": 160
+    },
+    {
+      "path": "line-2/tools/zipgate/demo.py",
+      "sha256": "107dbb0e571d453aa2f578f7a1c6a5f8a0ed2582e9227fa819042205eda6d36c",
+      "lines": 55
+    },
+    {
+      "path": "line-2/tools/zipgate/selftest.py",
+      "sha256": "4ac4e78e3c0f5f967dbf82237e8eb3ba7af3adda1ad09850247ef575c4810ec6",
+      "lines": 250
+    },
+    {
+      "path": "line-2/tools/zipgate/zipgate.py",
+      "sha256": "1e02964a97a88ce3e720707476a8376f021a0bfa61dfd3bd38d49de9a4494d87",
+      "lines": 198
+    },
+    {
+      "path": "line-2/tools/zipmanifest/demo.py",
+      "sha256": "9f84e2d03495549d15965292c80bcee251102dcb20fbad5a27e2fefeb4924bb2",
+      "lines": 41
+    },
+    {
+      "path": "line-2/tools/zipmanifest/zipmanifest.py",
+      "sha256": "aaccbb8c1c9ade9bc35341e9b03acbbcdec04b8c316c038650a3e230bf199e4a",
+      "lines": 127
+    },
+    {
+      "path": "line-2/tools/zipmerge/demo.py",
+      "sha256": "d575ff4d12f69ad3c0030c390fdae9e02069bfbb1abced984b6f90570d57870d",
+      "lines": 53
+    },
+    {
+      "path": "line-2/tools/zipmerge/selftest.py",
+      "sha256": "16d6de3c25c66425d5b984204ea3424bee9228b946f23bc44d93c343af71e4f7",
+      "lines": 168
+    },
+    {
+      "path": "line-2/tools/zipmerge/zipmerge.py",
+      "sha256": "f7618bc31fc4f466222199619dccbb868dd97d1e6daaafee137ce092ec592590",
+      "lines": 202
+    },
+    {
+      "path": "line-2/tools/zipselect/demo.py",
+      "sha256": "0e561f0c355cd2dc2b609d5a1c151a3aa5bddf1223a406fa1729af9c0199db6e",
+      "lines": 51
+    },
+    {
+      "path": "line-2/tools/zipselect/selftest.py",
+      "sha256": "b3b00fcea4aaa21cdd236f562d8917cbabf3478103273f4e81ed35ba71d91799",
+      "lines": 321
+    },
+    {
+      "path": "line-2/tools/zipselect/zipselect.py",
+      "sha256": "4ea5ca76e768c6578fc2950e26c1bd56890a4b5c83e4d94cc7291662efaf8692",
+      "lines": 192
+    },
+    {
+      "path": "line-2/tools/zipverify/demo.py",
+      "sha256": "98f598d58d02f1290b23e2a624a4710f2cbcc1f803adc40539f559f1eb57d157",
+      "lines": 47
+    },
+    {
+      "path": "line-2/tools/zipverify/selftest.py",
+      "sha256": "9a03273f3671b47ec92a64bdb23784473ecce68e88b30121edaa7090337b16b3",
+      "lines": 203
+    },
+    {
+      "path": "line-2/tools/zipverify/zipverify.py",
+      "sha256": "28b5b75d4015f3cbd87e073588b74e8d833e69cb2635b9e26e5ebc0b2154a35b",
+      "lines": 136
+    },
+    {
+      "path": "line-3/tools/batchintake/batchintake.py",
+      "sha256": "f0d95967e121c7db5da102777c71225346a6149b1579fdd94b69e6919e9cdf70",
+      "lines": 114
+    },
+    {
+      "path": "line-3/tools/batchintake/selftest.py",
+      "sha256": "d0027f0c94340ba53e7e3a0e5c21989e89e05e65121807253cc1736afc6777be",
+      "lines": 154
+    },
+    {
+      "path": "line-3/tools/boundaudit/boundaudit.py",
+      "sha256": "aed7426c07bba6bc86643c8fb63221794610f44f79eae3ee669e539be556b246",
+      "lines": 149
+    },
+    {
+      "path": "line-3/tools/boundaudit/selftest.py",
+      "sha256": "71c1c384657c5c993510c1c4678c537ca79373daff7267274b4039b6fadbb3ca",
+      "lines": 195
+    },
+    {
+      "path": "line-3/tools/rewardaudit/rewardaudit.py",
+      "sha256": "fc1da6ddd161e750ce616c51c784a916f50477f7e21a33c172fec638b28293c9",
+      "lines": 144
+    },
+    {
+      "path": "line-3/tools/rewardaudit/selftest.py",
+      "sha256": "a86b96b34f9281ad8f57cecf94c0d1da850f66438ec2aaa9d0af1cb8dececcdc",
+      "lines": 192
+    },
+    {
+      "path": "line-3/tools/rewardbatch/rewardbatch.py",
+      "sha256": "bf98a74afdf3d2735f7c7dfc34465bf48fe2a24bb3304eaf5d06fecfb1a4baf5",
+      "lines": 117
+    },
+    {
+      "path": "line-3/tools/rewardbatch/selftest.py",
+      "sha256": "16bc3b18a682170f749cdd6f5afa6809598e58c9e66162614db9e2c7f0ff3dbf",
+      "lines": 140
+    },
+    {
+      "path": "line-3/tools/rewardbounds/rewardbounds.py",
+      "sha256": "43ef21f2f121936ac4269d5d0a1ae1b134adb237abdbb53a42f82e091e6474dd",
+      "lines": 220
+    },
+    {
+      "path": "line-3/tools/rewardbounds/selftest.py",
+      "sha256": "f0b55d78471c83209d6160f97624a7df333c42770e6567e521827a8d363daf7d",
+      "lines": 275
+    },
+    {
+      "path": "line-3/tools/rewardcompare/rewardcompare.py",
+      "sha256": "98b8bb29b23c98dc9b1a663638a0cd9b6748b19d9ce8c9e51fb56314534a19d7",
+      "lines": 102
+    },
+    {
+      "path": "line-3/tools/rewardcompare/selftest.py",
+      "sha256": "408b7bc73df484b869f899d99667542e1e6580f236e93d11b7d57fae43e0d15c",
+      "lines": 106
+    },
+    {
+      "path": "line-3/tools/rewardcsv/rewardcsv.py",
+      "sha256": "4dbcba7aff019b5ff15794994ba391981a462e555c400155108a6f7a6e75cab5",
+      "lines": 87
+    },
+    {
+      "path": "line-3/tools/rewardcsv/selftest.py",
+      "sha256": "e04685d3a03c6862517dc3869a3b6c4a7dc1f2055aa3b8389ebe878ebdb09641",
+      "lines": 107
+    },
+    {
+      "path": "line-3/tools/rewardmerge/rewardmerge.py",
+      "sha256": "c18fddfeac80e8b6801e892fd2010fdaf95776269da9c606ddc07d9dcfe5c17f",
+      "lines": 139
+    },
+    {
+      "path": "line-3/tools/rewardmerge/selftest.py",
+      "sha256": "c6f611b4b30c33b7c8132c999d70ec5155dc201d1d8b7d526cd8dfac3192b383",
+      "lines": 125
+    },
+    {
+      "path": "line-3/tools/rewardproof/rewardproof.py",
+      "sha256": "ccbe66d9e7fdd2bee8d20176d77c5153a329ec5f1b6ccc50660652d6dc424529",
+      "lines": 194
+    },
+    {
+      "path": "line-3/tools/rewardproof/selftest.py",
+      "sha256": "1d4d534ed55474ef3e7b376082e6d9c9b3657b21784b4dbf9bdd8d78a1c8700f",
+      "lines": 206
+    },
+    {
+      "path": "line-3/tools/rewardreceipt/rewardreceipt.py",
+      "sha256": "0d1536ece1b0c6761ce3e4ec0ec1ef90a37e11b82622d6c941a98821a6a321ec",
+      "lines": 77
+    },
+    {
+      "path": "line-3/tools/rewardreceipt/selftest.py",
+      "sha256": "5c3f6dba19df537f5106c19f4c4dc19b229e64fbbd750f7c7f4cc42cf46dccdb",
+      "lines": 65
+    },
+    {
+      "path": "line-3/tools/rewardsplit/rewardsplit.py",
+      "sha256": "f75b31fc0d2e644b3a5bb5b28e3e18695c1aa8a23a4d9a53ad2c51f70b76b637",
+      "lines": 323
+    },
+    {
+      "path": "line-3/tools/rewardsplit/selftest.py",
+      "sha256": "026d7285461f9361c0c575671c4af81464255fc36ff32524f25dc3bfad728e94",
+      "lines": 198
+    },
+    {
+      "path": "line-3/tools/rewardtarget/rewardtarget.py",
+      "sha256": "44aa7c1e69e4827049e086e59be44d99537b410c71a491b5dd75d8959d48a4e0",
+      "lines": 149
+    },
+    {
+      "path": "line-3/tools/rewardtarget/selftest.py",
+      "sha256": "b5e5e74316261829e87084d594abb04eb4438d696bd6af9beb1fa6d4330519d3",
+      "lines": 145
+    },
+    {
+      "path": "line-3/tools/rewardwindow/rewardwindow.py",
+      "sha256": "33831b883a29b28769a69d0727a2430e71795b73c737f1029180978dbb94993f",
+      "lines": 126
+    },
+    {
+      "path": "line-3/tools/rewardwindow/selftest.py",
+      "sha256": "2532379af251f748467b26ee2fb31d1561059d88a3e8cc8ceebb9febfc496627",
+      "lines": 95
+    },
+    {
+      "path": "line-4/tools/apidelta/apidelta.py",
+      "sha256": "9331dfe89870e60d63da4653d108aeb6621474b662c63ab8cc30082fcdf0b589",
+      "lines": 406
+    },
+    {
+      "path": "line-4/tools/apidelta/selftest.py",
+      "sha256": "124a035bf4b33dd5ca191869f36b629716a7846ae75dd2188cd9c23f5eb3212d",
+      "lines": 286
+    },
+    {
+      "path": "line-4/tools/authcheck/authcheck.py",
+      "sha256": "b600bac9e0597cc292102525dee8fc4519ace89839359fd1f95a69a67308b1f4",
+      "lines": 132
+    },
+    {
+      "path": "line-4/tools/authcheck/selftest.py",
+      "sha256": "0017586fbb035ae7a377e6d357f89e6a03b224a25fe29814355fc1de51df4d3e",
+      "lines": 206
+    },
+    {
+      "path": "line-4/tools/boundcheck/boundcheck.py",
+      "sha256": "ad7fc5ccf92017fe2864f95be3cfbe73739afed08c784a4c828314083fc639e6",
+      "lines": 128
+    },
+    {
+      "path": "line-4/tools/boundcheck/selftest.py",
+      "sha256": "5742b4b3fa7a1c35bdd75b43e3095b191f26a347c7e4180dcafa4582a1bc2fcd",
+      "lines": 105
+    },
+    {
+      "path": "line-4/tools/constcheck/constcheck.py",
+      "sha256": "b704936a3507107cfc5ffe100108eb2a1e6987c719a35f453fd79842573fc6be",
+      "lines": 99
+    },
+    {
+      "path": "line-4/tools/constcheck/selftest.py",
+      "sha256": "ab2642f57b0bf60f03067ed75f2baadb4c821355d77b5688a98f18785b4a2d43",
+      "lines": 109
+    },
+    {
+      "path": "line-4/tools/dependcheck/dependcheck.py",
+      "sha256": "d699701012be84d775c024fc75917d354f24ae2b202fd052053fbe1a0ff5a3bf",
+      "lines": 135
+    },
+    {
+      "path": "line-4/tools/dependcheck/selftest.py",
+      "sha256": "50032d1fabc734cf37c5e6634881e824aec772fd3743c863d893abe538d57020",
+      "lines": 160
+    },
+    {
+      "path": "line-4/tools/fallbackheaders/fallbackheaders.py",
+      "sha256": "fa1e518516c966bcc6fb9ef10a567455f99a707fcffaf13223cd41932a49d6c8",
+      "lines": 144
+    },
+    {
+      "path": "line-4/tools/fallbackheaders/selftest.py",
+      "sha256": "673684e77663c683bcaade53115352510fcba952584051c706394e4188459e54",
+      "lines": 134
+    },
+    {
+      "path": "line-4/tools/headercheck/headercheck.py",
+      "sha256": "7c08c475edee943f41493de21599f39d7d2fd684892990e39cd6c94c5bd6752c",
+      "lines": 184
+    },
+    {
+      "path": "line-4/tools/headercheck/selftest.py",
+      "sha256": "d5bd6ac5ecedde0f8962445392b26eeb9b8bfcd5e4acb7d72209cff98d36afc1",
+      "lines": 182
+    },
+    {
+      "path": "line-4/tools/idcheck/idcheck.py",
+      "sha256": "a3aea035c099dd7de0a10b4a7329eaf10c851a477fa110c2a8915d5236efb138",
+      "lines": 125
+    },
+    {
+      "path": "line-4/tools/idcheck/selftest.py",
+      "sha256": "1c7be30fe932af576ddd56d5a9acd45338c7a3e5a80a39ac7f0ae66bd2a27351",
+      "lines": 150
+    },
+    {
+      "path": "line-4/tools/multiplecheck/multiplecheck.py",
+      "sha256": "2fb144bc429388dadea917e0125cf5f64becd2c144835873abe77047f02d540d",
+      "lines": 107
+    },
+    {
+      "path": "line-4/tools/multiplecheck/selftest.py",
+      "sha256": "0ec5f8ef92de873993819445849d423517d2e567be9550bd62aacde4c4a35c2e",
+      "lines": 139
+    },
+    {
+      "path": "line-4/tools/oauthcheck/oauthcheck.py",
+      "sha256": "8e7814cdda548e2aeea4f328f70bf66251862be304d61fb2d7fe37706f8102e1",
+      "lines": 171
+    },
+    {
+      "path": "line-4/tools/oauthcheck/selftest.py",
+      "sha256": "5cfb2f149e4a825d307136ce07754caae205785d23be55ed0be1d12cca2802d8",
+      "lines": 211
+    },
+    {
+      "path": "line-4/tools/paramcheck/paramcheck.py",
+      "sha256": "19d48b98672644612dd943bc116701219c52b3159fa30457df7e32e49adcdf4b",
+      "lines": 140
+    },
+    {
+      "path": "line-4/tools/paramcheck/selftest.py",
+      "sha256": "2616593085e9d9a5a31d29a9dd532e1a6c9ab49ffde7f8bfc6d2db6e071fd26a",
+      "lines": 170
+    },
+    {
+      "path": "line-4/tools/schemecheck/schemecheck.py",
+      "sha256": "60d13c0a3d341f39df26de9094f551decf85f412beb515ef81e5bec614fcbc5a",
+      "lines": 132
+    },
+    {
+      "path": "line-4/tools/schemecheck/selftest.py",
+      "sha256": "8995fbd088c2bc957ce6f01af55f34d098a2e85acfe45e7da52084ea1e9ffece",
+      "lines": 158
+    },
+    {
+      "path": "line-4/tools/servercheck/selftest.py",
+      "sha256": "be436534bbcaed0ccfc2a683cc846deb31a782fc9b2288c607a8ee07942768b5",
+      "lines": 192
+    },
+    {
+      "path": "line-4/tools/servercheck/servercheck.py",
+      "sha256": "6d34cbb8cf5ba3c8ac8d09ba213b42dca2c98f2dbcba4480b0615ebf6ce009e0",
+      "lines": 191
+    },
+    {
+      "path": "line-4/tools/statuscheck/selftest.py",
+      "sha256": "3c090621da91c320f6462a4780c8d1db3cacf8105b5fdba99be332dbeaaaa71c",
+      "lines": 180
+    },
+    {
+      "path": "line-4/tools/statuscheck/statuscheck.py",
+      "sha256": "102bf4d3fad5f40feda5b695c083e1def8319366fbca7815df65b5e537ecc64e",
+      "lines": 140
+    },
+    {
+      "path": "line-4/tools/uniquecheck/selftest.py",
+      "sha256": "a66c7d1a4961715e0dc05db3af147f24817d6b4697f21bd1de198a4db5d71a69",
+      "lines": 130
+    },
+    {
+      "path": "line-4/tools/uniquecheck/uniquecheck.py",
+      "sha256": "c8153790ed62c504eadc174085309a081536e847a3b7d2a5128fdcaa31ffc30a",
+      "lines": 91
+    }
+  ],
+  "reviewed_dynamic_workspace_imports": [
+    [
+      "line-1/tools/capguard/capguard.py",
+      16,
+      "_spec.loader.exec_module(pc)"
+    ],
+    [
+      "line-1/tools/capguard/selftest.py",
+      17,
+      "spec.loader.exec_module(capguard)"
+    ],
+    [
+      "line-1/tools/frontier/frontier.py",
+      14,
+      "_spec.loader.exec_module(pc)"
+    ],
+    [
+      "line-1/tools/goalslice/goalslice.py",
+      14,
+      "_spec.loader.exec_module(check)"
+    ],
+    [
+      "line-1/tools/goalslice/selftest.py",
+      97,
+      "spec.loader.exec_module(planner)"
+    ],
+    [
+      "line-1/tools/idlemap/idlemap.py",
+      14,
+      "_spec.loader.exec_module(check)"
+    ],
+    [
+      "line-1/tools/idlemap/selftest.py",
+      15,
+      "spec.loader.exec_module(m)"
+    ],
+    [
+      "line-1/tools/optplan/optplan.py",
+      16,
+      "_spec.loader.exec_module(_workplan)"
+    ],
+    [
+      "line-1/tools/plancheck/selftest.py",
+      24,
+      "spec.loader.exec_module(module)"
+    ],
+    [
+      "line-1/tools/plancompare/plancompare.py",
+      13,
+      "_spec.loader.exec_module(check)"
+    ],
+    [
+      "line-1/tools/replan/replan.py",
+      16,
+      "_spec.loader.exec_module(_workplan)"
+    ],
+    [
+      "line-1/tools/slackmap/selftest.py",
+      143,
+      "spec.loader.exec_module(module)"
+    ],
+    [
+      "line-1/tools/slackmap/slackmap.py",
+      16,
+      "_spec.loader.exec_module(pc)"
+    ],
+    [
+      "line-3/tools/batchintake/batchintake.py",
+      12,
+      "SPEC.loader.exec_module(rb)"
+    ],
+    [
+      "line-3/tools/boundaudit/boundaudit.py",
+      13,
+      "SPEC.loader.exec_module(rb)"
+    ],
+    [
+      "line-3/tools/rewardaudit/rewardaudit.py",
+      15,
+      "SPEC.loader.exec_module(rr)"
+    ],
+    [
+      "line-3/tools/rewardbatch/rewardbatch.py",
+      13,
+      "SPEC.loader.exec_module(rr)"
+    ],
+    [
+      "line-3/tools/rewardbounds/rewardbounds.py",
+      16,
+      "SPEC.loader.exec_module(rr)"
+    ],
+    [
+      "line-3/tools/rewardcompare/rewardcompare.py",
+      14,
+      "SPEC.loader.exec_module(rr)"
+    ],
+    [
+      "line-3/tools/rewardcsv/rewardcsv.py",
+      13,
+      "SPEC.loader.exec_module(rr)"
+    ],
+    [
+      "line-3/tools/rewardmerge/rewardmerge.py",
+      13,
+      "SPEC.loader.exec_module(rr)"
+    ],
+    [
+      "line-3/tools/rewardproof/rewardproof.py",
+      14,
+      "SPEC.loader.exec_module(rr)"
+    ],
+    [
+      "line-3/tools/rewardreceipt/rewardreceipt.py",
+      15,
+      "SPEC.loader.exec_module(rs)"
+    ],
+    [
+      "line-3/tools/rewardsplit/selftest.py",
+      16,
+      "spec.loader.exec_module(rs)"
+    ],
+    [
+      "line-3/tools/rewardsplit/selftest.py",
+      169,
+      "receipt_spec.loader.exec_module(receipt)"
+    ],
+    [
+      "line-3/tools/rewardtarget/rewardtarget.py",
+      14,
+      "SPEC.loader.exec_module(rr)"
+    ],
+    [
+      "line-3/tools/rewardwindow/rewardwindow.py",
+      14,
+      "SPEC.loader.exec_module(rr)"
+    ],
+    [
+      "line-4/tools/authcheck/authcheck.py",
+      13,
+      "spec.loader.exec_module(depend)"
+    ],
+    [
+      "line-4/tools/boundcheck/boundcheck.py",
+      14,
+      "spec.loader.exec_module(api)"
+    ],
+    [
+      "line-4/tools/constcheck/constcheck.py",
+      16,
+      "spec.loader.exec_module(multiple)"
+    ],
+    [
+      "line-4/tools/dependcheck/dependcheck.py",
+      13,
+      "spec.loader.exec_module(unique)"
+    ],
+    [
+      "line-4/tools/fallbackheaders/fallbackheaders.py",
+      15,
+      "SPEC.loader.exec_module(status)"
+    ],
+    [
+      "line-4/tools/headercheck/headercheck.py",
+      14,
+      "spec.loader.exec_module(ids)"
+    ],
+    [
+      "line-4/tools/idcheck/idcheck.py",
+      13,
+      "spec.loader.exec_module(server)"
+    ],
+    [
+      "line-4/tools/multiplecheck/multiplecheck.py",
+      14,
+      "spec.loader.exec_module(bound)"
+    ],
+    [
+      "line-4/tools/oauthcheck/oauthcheck.py",
+      13,
+      "spec.loader.exec_module(scheme)"
+    ],
+    [
+      "line-4/tools/paramcheck/paramcheck.py",
+      13,
+      "spec.loader.exec_module(previous)"
+    ],
+    [
+      "line-4/tools/schemecheck/schemecheck.py",
+      14,
+      "spec.loader.exec_module(auth)"
+    ],
+    [
+      "line-4/tools/servercheck/servercheck.py",
+      15,
+      "spec.loader.exec_module(oauth)"
+    ],
+    [
+      "line-4/tools/statuscheck/statuscheck.py",
+      14,
+      "spec.loader.exec_module(previous)"
+    ],
+    [
+      "line-4/tools/uniquecheck/uniquecheck.py",
+      13,
+      "spec.loader.exec_module(const)"
+    ]
+  ],
+  "review": "AST/import/I-O inspection of every source; dynamic exec_module calls resolve only sibling workspace tools. New tool implementations, shared imports and exceptional test paths also read directly. Offline checks and demos selected; no inspect/network CLI mode invoked."
+}

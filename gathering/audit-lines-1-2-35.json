@@ -1,0 +1,880 @@
+{
+  "round": 35,
+  "commands": [
+    {
+      "line": 1,
+      "tool": "budgetpath",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/budgetpath/budgetpath.py",
+        "line-1/tools/budgetpath/example.json"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "197ec77b6127137711ee5f59f172752e012e5ec4fc5f1754ba9b7e71d9bd5dbb",
+      "evidence": "{\n  \"budget_minutes\": 20,\n  \"critical_path\": [\n    \"inspect\",\n    \"build\",\n    \"review\"\n  ],\n  \"total_minutes\": 18,\n  \"within_budget\": true\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "capguard",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/capguard/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 9,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.137s\n\nOK\n"
+    },
+    {
+      "line": 1,
+      "tool": "capguard",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/capguard/capguard.py",
+        "--demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "f74a81208d77111f524461993a9c34e10b8a1d635e70bfff5df777a89566fc03",
+      "evidence": "ped_start\":\"2\",\"start_shift\":\"0\",\"finish_shift\":\"1\"},{\"task\":\"check\",\"estimate\":\"2\",\"cap\":\"2\",\"baseline_start\":\"7\",\"capped_start\":\"8\",\"start_shift\":\"1\",\"finish_shift\":\"1\"},{\"task\":\"fixtures\",\"estimate\":\"3\",\"cap\":\"5\",\"baseline_start\":\"2\",\"capped_start\":\"2\",\"start_shift\":\"0\",\"finish_shift\":\"2\"},{\"task\":\"read\",\"estimate\":\"2\",\"cap\":\"2\",\"baseline_start\":\"0\",\"capped_start\":\"0\",\"start_shift\":\"0\",\"finish_shift\":\"0\"}],\"capped_earliest_plan\":{\"workers\":2,\"units\":\"minutes\",\"finish\":10,\"schedule\":[{\"task\":\"read\",\"worker\":1,\"start\":0,\"finish\":2},{\"task\":\"build\",\"worker\":1,\"start\":2,\"finish\":8},{\"task\":\"fixtures\",\"worker\":2,\"start\":2,\"finish\":7},{\"task\":\"check\",\"worker\":1,\"start\":8,\"finish\":10}]},\"scope\":\"All durations may reach their caps simultaneously; fixed worker assignment and order, continuously available workers, no release dates. Input idle gaps are removed. Estimates/caps are assumptions.\"}\n"
+    },
+    {
+      "line": 1,
+      "tool": "crewfit",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/crewfit/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 7,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "test_all_unknown_is_inconclusive (__main__.CrewfitTests.test_all_unknown_is_inconclusive) ... ok\ntest_bad_inputs (__main__.CrewfitTests.test_bad_inputs) ... ok\ntest_candidate_does_not_claim_minimum (__main__.CrewfitTests.test_candidate_does_not_claim_minimum) ... ok\ntest_cli_demo_and_nonproof_exit (__main__.CrewfitTests.test_cli_demo_and_nonproof_exit) ... ok\ntest_demo_proven_and_plan_checked (__main__.CrewfitTests.test_demo_proven_and_plan_checked) ... ok\ntest_impossible_even_with_four (__main__.CrewfitTests.test_impossible_even_with_four) ... ok\ntest_seeded_independent_minute_grid (__main__.CrewfitTests.test_seeded_independent_minute_grid) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.172s\n\nOK\n"
+    },
+    {
+      "line": 1,
+      "tool": "crewfit",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/crewfit/crewfit.py",
+        "--demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "939e72819ea6ff5cffc3e16f67615144e0700a7f98ee08b2399180c12982773a",
+      "evidence": "{\n  \"budget\": 4,\n  \"max_workers\": 4,\n  \"state_limit_per_count\": 100000,\n  \"attempts\": [\n    {\n      \"workers\": 1,\n      \"status\": \"infeasible\",\n      \"states_examined\": 4\n    },\n    {\n      \"workers\": 2,\n      \"status\": \"feasible\",\n      \"states_examined\": 9\n    }\n  ],\n  \"status\": \"minimum_proven\",\n  \"workers\": 2,\n  \"plan\": {\n    \"units\": \"minutes\",\n    \"workers\": 2,\n    \"finish\": 4,\n    \"schedule\": [\n      {\n        \"task\": \"background\",\n        \"worker\": 1,\n        \"start\": 0,\n        \"finish\": 4\n      },\n      {\n        \"task\": \"release\",\n        \"worker\": 2,\n        \"start\": 0,\n        \"finish\": 1\n      },\n      {\n        \"task\": \"handoff\",\n        \"worker\": 2,\n        \"start\": 1,\n        \"finish\": 3\n      }\n    ]\n  },\n  \"minimum_proven\": true\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "frontier",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/frontier/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 12,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "............\n----------------------------------------------------------------------\nRan 12 tests in 0.049s\n\nOK\n"
+    },
+    {
+      "line": 1,
+      "tool": "frontier",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/frontier/frontier.py",
+        "--demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "8a893c1c244e0fe2c2222adc0537ac5ed1595829828a8f2da4738b39f848178f",
+      "evidence": "es\",\n  \"elapsed\": \"3\",\n  \"deadline\": \"10\",\n  \"completed\": [\n    \"read\"\n  ],\n  \"running\": [\n    {\n      \"task\": \"build\",\n      \"remaining\": \"4\"\n    }\n  ],\n  \"free_workers\": 1,\n  \"ready\": [\n    {\n      \"task\": \"fixtures\",\n      \"minutes\": \"3\",\n      \"downstream_minutes\": \"5\"\n    }\n  ],\n  \"blocked\": [\n    {\n      \"task\": \"check\",\n      \"waiting_for\": [\n        \"build\",\n        \"fixtures\"\n      ]\n    }\n  ],\n  \"remaining_work\": \"9\",\n  \"dependency_lower_bound\": \"6\",\n  \"capacity_lower_bound\": \"9/2\",\n  \"remaining_lower_bound\": \"6\",\n  \"available_minutes\": \"7\",\n  \"deadline_status\": \"not_ruled_out\",\n  \"scope\": \"Snapshot only. Lower bounds cannot prove feasibility. Ready ordering is a heuristic, not an optimal launch decision. No tasks executed.\",\n  \"assumptions\": \"Interchangeable workers; running work stays active; unfinished estimates replace original durations; no historical timing certified.\"\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "gatecheck",
+      "kind": "inline-check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/gatecheck/gatecheck.py",
+        "--self-test"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "b36657dd4b865eb4e387bb613f378bbbd04876009f661308f3e80fe188cfdbb6",
+      "evidence": "{\n  \"tests\": 8,\n  \"passed\": true\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "gatecheck",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/gatecheck/gatecheck.py",
+        "--demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "2f7035ab5d91139adb75b267d1b670006753d0b6faa3fdf52c8aaf7bd3e73000",
+      "evidence": "{\n  \"valid\": true,\n  \"schedule_valid\": true,\n  \"schedule_violations\": [],\n  \"milestones\": [\n    {\n      \"id\": \"draft\",\n      \"tasks\": [\n        \"build\",\n        \"fixtures\"\n      ],\n      \"due_minutes\": \"7\",\n      \"finish_minutes\": \"7\",\n      \"slack_minutes\": \"0\",\n      \"on_time\": true\n    },\n    {\n      \"id\": \"handoff\",\n      \"tasks\": [\n        \"check\"\n      ],\n      \"due_minutes\": \"10\",\n      \"finish_minutes\": \"9\",\n      \"slack_minutes\": \"1\",\n      \"on_time\": true\n    }\n  ],\n  \"arithmetic\": \"exact decimal minutes; no tolerance; times printed as exact strings\",\n  \"late_gates\": [],\n  \"scope\": \"named task groups only; estimates and worker availability are caller supplied\"\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "gateplan",
+      "kind": "inline-check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/gateplan/gateplan.py",
+        "--self-test"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "5cabef671b393495bf208c72ab36cd49b6b754a3f0c90188343409dd82d22082",
+      "evidence": "{\n  \"passed\": true,\n  \"checks\": 6\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "gateplan",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/gateplan/gateplan.py",
+        "--demo",
+        "--workers",
+        "1",
+        "--budget",
+        "7"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "2916570327f975e97887efc7d742cf961eef388da5b5956f6b04b35215173040",
+      "evidence": "{\n  \"status\": \"feasible\",\n  \"proven\": true,\n  \"objective\": \"shortest finish among schedules meeting all gates\",\n  \"workers\": 1,\n  \"budget\": 7,\n  \"states_examined\": 6,\n  \"state_limit\": 100000,\n  \"plan\": {\n    \"units\": \"minutes\",\n    \"workers\": 1,\n    \"finish\": 7,\n    \"schedule\": [\n      {\n        \"task\": \"release\",\n        \"worker\": 1,\n        \"start\": 0,\n        \"finish\": 1\n      },\n      {\n        \"task\": \"handoff\",\n        \"worker\": 1,\n        \"start\": 1,\n        \"finish\": 3\n      },\n      {\n        \"task\": \"background\",\n        \"worker\": 1,\n        \"start\": 3,\n        \"finish\": 7\n      }\n    ]\n  }\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "goalslice",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/goalslice/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 10,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "..........\n----------------------------------------------------------------------\nRan 10 tests in 0.531s\n\nOK\n"
+    },
+    {
+      "line": 1,
+      "tool": "goalslice",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/goalslice/goalslice.py",
+        "--demo",
+        "--explain"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "e253a89cabad93e6c6af1147f5c10b21c50e0f083241a42ac3579bbd935344f9",
+      "evidence": "{\n  \"targets\": [\n    \"deliver\"\n  ],\n  \"tasks\": [\n    {\n      \"id\": \"brief\",\n      \"minutes\": \"2\",\n      \"after\": []\n    },\n    {\n      \"id\": \"build\",\n      \"minutes\": \"5\",\n      \"after\": [\n        \"brief\"\n      ]\n    },\n    {\n      \"id\": \"deliver\",\n      \"minutes\": \"1\",\n      \"after\": [\n        \"test\"\n      ]\n    },\n    {\n      \"id\": \"test\",\n      \"minutes\": \"3\",\n      \"after\": [\n        \"build\"\n      ]\n    }\n  ],\n  \"required_by\": {\n    \"brief\": [\n      \"deliver\"\n    ],\n    \"build\": [\n      \"deliver\"\n    ],\n    \"deliver\": [\n      \"deliver\"\n    ],\n    \"test\": [\n      \"deliver\"\n    ]\n  },\n  \"omitted\": [\n    \"optional-chart\",\n    \"optional-polish\"\n  ],\n  \"retained_effort_minutes\": \"11\",\n  \"omitted_effort_minutes\": \"12\",\n  \"scope\": \"Caller-selected deliverables and declared prerequisites only; effort is not elapsed time or a deadline guarantee; no task execution.\"\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "idlemap",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/idlemap/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 9,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.295s\n\nOK\n"
+    },
+    {
+      "line": 1,
+      "tool": "idlemap",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/idlemap/idlemap.py",
+        "--demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "733293d8ae7c665561e7c8155b7888f97e1ecd5d4d163c7771603656860b7028",
+      "evidence": "      \"running\": 1,\n      \"idle_workers\": 1,\n      \"ready_waiting\": 0\n    }\n  ],\n  \"tasks\": [\n    {\n      \"task\": \"build\",\n      \"ready_at\": \"0\",\n      \"start\": \"0\",\n      \"ready_wait_minutes\": \"0\",\n      \"wait_with_spare_capacity\": \"0\",\n      \"wait_with_all_workers_busy\": \"0\"\n    },\n    {\n      \"task\": \"check\",\n      \"ready_at\": \"6\",\n      \"start\": \"6\",\n      \"ready_wait_minutes\": \"0\",\n      \"wait_with_spare_capacity\": \"0\",\n      \"wait_with_all_workers_busy\": \"0\"\n    },\n    {\n      \"task\": \"fixtures\",\n      \"ready_at\": \"0\",\n      \"start\": \"4\",\n      \"ready_wait_minutes\": \"4\",\n      \"wait_with_spare_capacity\": \"4\",\n      \"wait_with_all_workers_busy\": \"0\"\n    }\n  ],\n  \"scope\": \"observed intervals at supplied estimates, from zero to plan finish; spare capacity assumes interchangeable workers; waiting may be intentional; no execution, rescheduling, optimality or achievable speedup claim\"\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "optplan",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/optplan/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 10,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "four_task_dags (__main__.OptplanTests.test_all_four_task_dags) ... ok\ntest_bounded_strict_json (__main__.OptplanTests.test_bounded_strict_json) ... ok\ntest_cli_success_and_limit_failure (__main__.OptplanTests.test_cli_success_and_limit_failure) ... ok\ntest_fourteen_task_chain (__main__.OptplanTests.test_fourteen_task_chain) ... ok\ntest_idle_regression (__main__.OptplanTests.test_idle_regression) ... ok\ntest_invalid_graphs (__main__.OptplanTests.test_invalid_graphs) ... ok\ntest_seeded_oracle (__main__.OptplanTests.test_seeded_oracle) ... ok\ntest_serial_and_unlimited_workers (__main__.OptplanTests.test_serial_and_unlimited_workers) ... ok\ntest_simultaneous_completions (__main__.OptplanTests.test_simultaneous_completions) ... ok\ntest_state_limit (__main__.OptplanTests.test_state_limit) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.215s\n\nOK\n"
+    },
+    {
+      "line": 1,
+      "tool": "optplan",
+      "kind": "inline-check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/optplan/optplan.py",
+        "--self-test"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "291b2c3ac98d8ad400857c35c47b7bbd4f7f15710ad0dc598036115630fdae44",
+      "evidence": "PASS: optimum demos, intentional-idle regression, worker bound, integer/task limits\n"
+    },
+    {
+      "line": 1,
+      "tool": "optplan",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/optplan/optplan.py",
+        "--idle-demo",
+        "--workers",
+        "2"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "ba8d7d794b626cab47a70497a6e0596aa03faf0f329a568536f8b354264a09be",
+      "evidence": "{\n  \"units\": \"minutes\",\n  \"workers\": 2,\n  \"method\": \"exhaustive event search with intentional idle time\",\n  \"task_limit\": 14,\n  \"finish\": 16,\n  \"schedule\": [\n    {\n      \"task\": \"prepare\",\n      \"worker\": 1,\n      \"start\": 0,\n      \"finish\": 1\n    },\n    {\n      \"task\": \"build-a\",\n      \"worker\": 1,\n      \"start\": 1,\n      \"finish\": 8\n    },\n    {\n      \"task\": \"build-b\",\n      \"worker\": 2,\n      \"start\": 1,\n      \"finish\": 8\n    },\n    {\n      \"task\": \"background\",\n      \"worker\": 1,\n      \"start\": 8,\n      \"finish\": 14\n    },\n    {\n      \"task\": \"integrate\",\n      \"worker\": 2,\n      \"start\": 8,\n      \"finish\": 16\n    }\n  ],\n  \"states_examined\": 24,\n  \"state_limit\": 100000,\n  \"proven_optimal\": true\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "plancheck",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/plancheck/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 15,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "main__.Checks.test_coverage) ... ok\ntest_deadline_and_untrusted_claims (__main__.Checks.test_deadline_and_untrusted_claims) ... ok\ntest_demo (__main__.Checks.test_demo) ... ok\ntest_dependency (__main__.Checks.test_dependency) ... ok\ntest_durations_and_intervals (__main__.Checks.test_durations_and_intervals) ... ok\ntest_exact_decimal (__main__.Checks.test_exact_decimal) ... ok\ntest_existing_planners (__main__.Checks.test_existing_planners) ... ok\ntest_idle_is_valid (__main__.Checks.test_idle_is_valid) ... ok\ntest_nested_worker_overlaps (__main__.Checks.test_nested_worker_overlaps) ... ok\ntest_read_boundary (__main__.Checks.test_read_boundary) ... ok\ntest_valid_and_immutable (__main__.Checks.test_valid_and_immutable) ... ok\ntest_worker_and_units (__main__.Checks.test_worker_and_units) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.303s\n\nOK\n"
+    },
+    {
+      "line": 1,
+      "tool": "plancheck",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/plancheck/plancheck.py",
+        "--demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "53734f67ffa159d87ec596df66115ff23b2132b6899de6641e1ed60a9c58e742",
+      "evidence": "{\n  \"valid_example\": {\n    \"valid\": true,\n    \"violations\": [],\n    \"tasks_expected\": 4,\n    \"schedule_entries\": 4,\n    \"workers_checked\": 2,\n    \"deadline_checked\": true,\n    \"arithmetic\": \"exact decimal values; no tolerance\",\n    \"scope\": \"full schedule feasibility at supplied estimates; no execution or optimality proof\"\n  },\n  \"tampered_example\": {\n    \"valid\": false,\n    \"violations\": [\n      \"dependency_violation:build->check\",\n      \"worker_overlap:1:check\"\n    ],\n    \"tasks_expected\": 4,\n    \"schedule_entries\": 4,\n    \"workers_checked\": 2,\n    \"deadline_checked\": true,\n    \"arithmetic\": \"exact decimal values; no tolerance\",\n    \"scope\": \"full schedule feasibility at supplied estimates; no execution or optimality proof\"\n  }\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "plancompare",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/plancompare/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 11,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.287s\n\nOK\n"
+    },
+    {
+      "line": 1,
+      "tool": "plancompare",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/plancompare/plancompare.py",
+        "--demo"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "5137c6e007916ece0cba8e768744ecf7a4c76f1bcd453632dcbbba8ca4845c00",
+      "evidence": "\"-2\",\n  \"counts\": {\n    \"earlier\": 2,\n    \"later\": 0,\n    \"same_time\": 1,\n    \"worker_moves\": 1\n  },\n  \"tasks\": [\n    {\n      \"task\": \"build\",\n      \"timing\": \"same_time\",\n      \"start_delta\": \"0\",\n      \"finish_delta\": \"0\",\n      \"before_worker\": 1,\n      \"after_worker\": 1,\n      \"worker_changed\": false\n    },\n    {\n      \"task\": \"check\",\n      \"timing\": \"earlier\",\n      \"start_delta\": \"-2\",\n      \"finish_delta\": \"-2\",\n      \"before_worker\": 1,\n      \"after_worker\": 1,\n      \"worker_changed\": false\n    },\n    {\n      \"task\": \"fixtures\",\n      \"timing\": \"earlier\",\n      \"start_delta\": \"-4\",\n      \"finish_delta\": \"-4\",\n      \"before_worker\": 1,\n      \"after_worker\": 2,\n      \"worker_changed\": true\n    }\n  ],\n  \"scope\": \"same full job and estimates; deltas are after minus before; no execution, progress or optimality claim\",\n  \"before_deadline_margin\": \"1\",\n  \"after_deadline_margin\": \"3\"\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "replan",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/replan/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 14,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "of) ... ok\ntest_inconsistent_progress (__main__.ReplanTests.test_inconsistent_progress) ... ok\ntest_input_not_mutated (__main__.ReplanTests.test_input_not_mutated) ... ok\ntest_margin_on_remaining_work_only (__main__.ReplanTests.test_margin_on_remaining_work_only) ... ok\ntest_no_progress_matches_predecessor (__main__.ReplanTests.test_no_progress_matches_predecessor) ... ok\ntest_repeated_active_and_worker (__main__.ReplanTests.test_repeated_active_and_worker) ... ok\ntest_running_workers_are_pinned (__main__.ReplanTests.test_running_workers_are_pinned) ... ok\ntest_simultaneous_completions_release_all_dependencies (__main__.ReplanTests.test_simultaneous_completions_release_all_dependencies) ... ok\ntest_timestamp_precision_rejected (__main__.ReplanTests.test_timestamp_precision_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 0.322s\n\nOK\n"
+    },
+    {
+      "line": 1,
+      "tool": "replan",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/replan/replan.py",
+        "--demo",
+        "--workers",
+        "2",
+        "--budget",
+        "27"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "61b124385a4b45d81405a89df52964e395756511bf96a5952082e93b9cd055ed",
+      "evidence": "[\n    \"prepare-fixtures\",\n    \"read-brief\"\n  ],\n  \"schedule\": [\n    {\n      \"task\": \"implement\",\n      \"worker\": 1,\n      \"start\": 9,\n      \"finish\": 19.0,\n      \"state\": \"running\",\n      \"remaining_minutes\": 10.0\n    },\n    {\n      \"task\": \"verify\",\n      \"worker\": 1,\n      \"start\": 19.0,\n      \"finish\": 24.0,\n      \"state\": \"pending\",\n      \"remaining_minutes\": 5.0\n    },\n    {\n      \"task\": \"write-handoff\",\n      \"worker\": 1,\n      \"start\": 24.0,\n      \"finish\": 26.0,\n      \"state\": \"pending\",\n      \"remaining_minutes\": 2.0\n    }\n  ],\n  \"finish\": 26.0,\n  \"remaining_minutes\": 17.0,\n  \"lower_bound_remaining\": 17.0,\n  \"earliest_possible_finish\": 26.0,\n  \"critical_path\": [\n    \"implement\",\n    \"verify\",\n    \"write-handoff\"\n  ],\n  \"fits_budget\": true,\n  \"deadline_verdict\": \"fits\",\n  \"slack\": 1.0,\n  \"method\": \"nonpreemptive longest downstream first; running tasks pinned to their workers\"\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "slackmap",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/slackmap/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 9,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "test_all_critical_branches (__main__.Checks.test_all_critical_branches) ... ok\ntest_cli_and_file_boundaries (__main__.Checks.test_cli_and_file_boundaries) ... ok\ntest_decimal_and_extremes (__main__.Checks.test_decimal_and_extremes) ... ok\ntest_demo_and_deadline (__main__.Checks.test_demo_and_deadline) ... ok\ntest_fixed_worker_order (__main__.Checks.test_fixed_worker_order) ... ok\ntest_integrates_existing_planners (__main__.Checks.test_integrates_existing_planners) ... ok\ntest_max_chain_and_determinism (__main__.Checks.test_max_chain_and_determinism) ... ok\ntest_oracle_and_float_sensitivity (__main__.Checks.test_oracle_and_float_sensitivity) ... ok\ntest_rejects_invalid_inputs (__main__.Checks.test_rejects_invalid_inputs) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.671s\n\nOK\n"
+    },
+    {
+      "line": 1,
+      "tool": "slackmap",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/slackmap/slackmap.py",
+        "--demo",
+        "--budget",
+        "10"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "03d11b160b09c50f14bfcd5f04b34ba5d639e3d6027d764681f38ae30e34c288",
+      "evidence": " \"earliest_finish\": \"9\",\n      \"latest_start\": \"8\",\n      \"latest_finish\": \"10\",\n      \"total_float\": \"1\",\n      \"free_float\": \"0\",\n      \"critical_to_minimum\": true\n    },\n    {\n      \"task\": \"fixtures\",\n      \"minutes\": \"3\",\n      \"earliest_start\": \"2\",\n      \"earliest_finish\": \"5\",\n      \"latest_start\": \"5\",\n      \"latest_finish\": \"8\",\n      \"total_float\": \"3\",\n      \"free_float\": \"2\",\n      \"critical_to_minimum\": false\n    },\n    {\n      \"task\": \"read\",\n      \"minutes\": \"2\",\n      \"earliest_start\": \"0\",\n      \"earliest_finish\": \"2\",\n      \"latest_start\": \"1\",\n      \"latest_finish\": \"3\",\n      \"total_float\": \"1\",\n      \"free_float\": \"0\",\n      \"critical_to_minimum\": true\n    }\n  ],\n  \"scope\": \"Unlimited workers: dependency lower bound only, not finite-worker feasibility.\",\n  \"warning\": \"Float is individual, not additive or permission to delay every task. Estimates are assumptions.\"\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "workplan",
+      "kind": "inline-check",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/workplan/workplan.py",
+        "--self-test"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "75df0f1855685f10e79216f2a4a32d1ef479f8301eae1df53393b056896d5c38",
+      "evidence": "PASS: demo, deadline checks, invalid inputs, 150 seeded dependency graphs, determinism and resource constraints\n"
+    },
+    {
+      "line": 1,
+      "tool": "workplan",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/workplan/workplan.py",
+        "--demo",
+        "--workers",
+        "2",
+        "--budget",
+        "25"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "2aa47d5ac31bf81bce6b054a873d65ad5f1ed083afe2fb78e8f960c7877b1d10",
+      "evidence": "{\n  \"units\": \"minutes\",\n  \"workers\": 2,\n  \"method\": \"nonpreemptive list scheduling; longest downstream duration first; ties by id\",\n  \"schedule\": [\n    {\n      \"task\": \"read-brief\",\n      \"worker\": 1,\n      \"start\": 0,\n      \"finish\": 3\n    },\n    {\n      \"task\": \"implement\",\n      \"worker\": 1,\n      \"start\": 3,\n      \"finish\": 15\n    },\n    {\n      \"task\": \"prepare-fixtures\",\n      \"worker\": 2,\n      \"start\": 3,\n      \"finish\": 7\n    },\n    {\n      \"task\": \"verify\",\n      \"worker\": 1,\n      \"start\": 15,\n      \"finish\": 20\n    },\n    {\n      \"task\": \"write-handoff\",\n      \"worker\": 1,\n      \"start\": 20,\n      \"finish\": 22\n    }\n  ],\n  \"finish\": 22,\n  \"critical_path\": [\n    \"read-brief\",\n    \"implement\",\n    \"verify\",\n    \"write-handoff\"\n  ],\n  \"critical_path_minutes\": 22,\n  \"lower_bound\": 22,\n  \"budget\": 25.0,\n  \"fits_budget\": true,\n  \"deadline_verdict\": \"fits\",\n  \"slack\": 3.0\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "gateplan",
+      "kind": "refusal",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/gateplan/gateplan.py",
+        "--demo",
+        "--workers",
+        "1",
+        "--budget",
+        "6"
+      ],
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "d149fc68ce135c4b02cc10f6b7bf80c0212fe69dc150bf0b50bc2e8dff0aff13",
+      "evidence": "{\n  \"status\": \"infeasible\",\n  \"proven\": true,\n  \"workers\": 1,\n  \"budget\": 6,\n  \"states_examined\": 5,\n  \"state_limit\": 100000\n}\n"
+    },
+    {
+      "line": 1,
+      "tool": "gateplan",
+      "kind": "refusal",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/gateplan/gateplan.py",
+        "--demo",
+        "--max-states",
+        "1"
+      ],
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "gateplan: state limit exceeded; feasibility not established\n"
+    },
+    {
+      "line": 2,
+      "tool": "safezip",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/safezip/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 44,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "st_resource_limits_require_positive_integers_before_read) ... ok\ntest_roundtrip (__main__.SafeZipTests.test_roundtrip) ... ok\ntest_shared_parents_count_once (__main__.SafeZipTests.test_shared_parents_count_once) ... ok\ntest_snapshot_resists_path_replacement (__main__.SafeZipTests.test_snapshot_resists_path_replacement) ... ok\ntest_symlink_and_special_members (__main__.SafeZipTests.test_symlink_and_special_members) ... ok\ntest_symlink_paths_refused (__main__.SafeZipTests.test_symlink_paths_refused) ... ok\ntest_time_budget_before_read_and_after_staging (__main__.SafeZipTests.test_time_budget_before_read_and_after_staging) ... ok\ntest_truncated_archive (__main__.SafeZipTests.test_truncated_archive) ... ok\ntest_unsupported_compression (__main__.SafeZipTests.test_unsupported_compression) ... ok\n\n----------------------------------------------------------------------\nRan 44 tests in 1.220s\n\nOK\n"
+    },
+    {
+      "line": 2,
+      "tool": "safezip",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/safezip/swarm_demo.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "0859e2b4d5b4bab43cc858d6e8adc1036ac0801410fb8a45fb5e4caf060560c5",
+      "evidence": "{\n  \"ok\": true,\n  \"network_used\": false,\n  \"sample_source\": \"https://api.imd.fun/openapi.json\",\n  \"sample_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"sample_bytes\": 23132,\n  \"archive_sha256\": \"a19b6d49f1bad5d27b51696e8050555390f1a006fc3420c87d57c8782257c718\",\n  \"zip_entries\": 1,\n  \"filesystem_nodes_excluding_destination_root\": 3,\n  \"nodes_2\": \"filesystem node limit exceeded\",\n  \"nodes_3\": \"extracted; bytes match capture\",\n  \"failed_stage_removed\": true\n}\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipaudit",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipaudit/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 16,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "ts.test_exact_tree_with_implicit_and_empty_directories) ... ok\ntest_extra_file_and_directory (__main__.AuditTests.test_extra_file_and_directory) ... ok\ntest_invalid_seconds (__main__.AuditTests.test_invalid_seconds) ... ok\ntest_missing_empty_directory (__main__.AuditTests.test_missing_empty_directory) ... ok\ntest_missing_file (__main__.AuditTests.test_missing_file) ... ok\ntest_no_mutation (__main__.AuditTests.test_no_mutation) ... ok\ntest_reference_limits (__main__.AuditTests.test_reference_limits) ... ok\ntest_root_symlink (__main__.AuditTests.test_root_symlink) ... ok\ntest_same_size_change (__main__.AuditTests.test_same_size_change) ... ok\ntest_symlink_file_and_directory (__main__.AuditTests.test_symlink_file_and_directory) ... ok\ntest_type_swap (__main__.AuditTests.test_type_swap) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.165s\n\nOK\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipaudit",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipaudit/demo.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "4582d0179bc059d8321e3f4dccccf444242755ecf97a8a59c5a7c2369f41f36e",
+      "evidence": "{\n  \"ok\": true,\n  \"network_used\": false,\n  \"source\": \"https://api.imd.fun/openapi.json\",\n  \"source_bytes\": 23132,\n  \"before\": {\n    \"ok\": true,\n    \"mode\": \"audit\",\n    \"archive_sha256\": \"a19b6d49f1bad5d27b51696e8050555390f1a006fc3420c87d57c8782257c718\",\n    \"nodes_checked\": 3,\n    \"bytes_checked\": 23132,\n    \"exact_tree\": true\n  },\n  \"same_size_damage_rejected\": \"content differs: 'docs/imd/openapi.json'\"\n}\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipbatch",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipbatch/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 30,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "in__.BatchTests.test_one_byte_after_exhausted_bytes) ... ok\ntest_outside_workspace (__main__.BatchTests.test_outside_workspace) ... ok\ntest_repeated_archive_counted_twice (__main__.BatchTests.test_repeated_archive_counted_twice) ... ok\ntest_shared_deadline_without_sleep (__main__.BatchTests.test_shared_deadline_without_sleep) ... ok\ntest_symlink_member (__main__.BatchTests.test_symlink_member) ... ok\ntest_symlink_source (__main__.BatchTests.test_symlink_source) ... ok\ntest_unsafe_member (__main__.BatchTests.test_unsafe_member) ... ok\ntest_uppercase_approval (__main__.BatchTests.test_uppercase_approval) ... ok\ntest_wrong_approval (__main__.BatchTests.test_wrong_approval) ... ok\ntest_zero_byte_entry_after_exhausted_bytes (__main__.BatchTests.test_zero_byte_entry_after_exhausted_bytes) ... ok\n\n----------------------------------------------------------------------\nRan 30 tests in 0.231s\n\nOK\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipbatch",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipbatch/demo.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "a64d1f5e2a34a78f055c17edad582e5133efdf4f1dc0e0e3f27f86e890cf0df9",
+      "evidence": "        \"preflight\": {\n          \"entries\": 1,\n          \"directory_bytes\": 67,\n          \"zip64\": false\n        }\n      },\n      {\n        \"archive\": \"test/scratch/zipbatch-demo-3wxftz3q/review.zip\",\n        \"archive_sha256\": \"5c638492b45e60bdf09b9ec5b3dac48951b966d224a44c9e2a04487acee5cdad\",\n        \"entries\": 1,\n        \"nodes_including_root\": 4,\n        \"uncompressed_bytes\": 23132,\n        \"preflight\": {\n          \"entries\": 1,\n          \"directory_bytes\": 67,\n          \"zip64\": false\n        }\n      }\n    ],\n    \"totals\": {\n      \"archives\": 2,\n      \"entries\": 2,\n      \"nodes_including_roots\": 8,\n      \"uncompressed_bytes\": 46264\n    },\n    \"batch_limits\": {\n      \"archives\": 32,\n      \"entries\": 2,\n      \"nodes_including_roots\": 8,\n      \"uncompressed_bytes\": 46264\n    }\n  },\n  \"each_fits_alone_but_batch_refused\": \"total uncompressed limit exceeded\",\n  \"nothing_extracted\": true\n}\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipbudget",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipbudget/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 20,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "__main__.BudgetTests.test_exact_file_and_byte_budget) ... ok\ntest_file_budget_breach (__main__.BudgetTests.test_file_budget_breach) ... ok\ntest_growth_while_reading_is_bounded (__main__.BudgetTests.test_growth_while_reading_is_bounded) ... ok\ntest_invalid_api_limits (__main__.BudgetTests.test_invalid_api_limits) ... ok\ntest_missing_source (__main__.BudgetTests.test_missing_source) ... ok\ntest_path_replacement_uses_snapshot (__main__.BudgetTests.test_path_replacement_uses_snapshot) ... ok\ntest_source_symlink (__main__.BudgetTests.test_source_symlink) ... ok\ntest_trailing_bytes (__main__.BudgetTests.test_trailing_bytes) ... ok\ntest_underreported_entries (__main__.BudgetTests.test_underreported_entries) ... ok\ntest_workspace_confinement (__main__.BudgetTests.test_workspace_confinement) ... ok\n\n----------------------------------------------------------------------\nRan 20 tests in 0.309s\n\nOK\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipbudget",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipbudget/demo.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "6c4c565aff8881f139068b2aeb016a2c909192d35c1a66088a87455d6a5e7501",
+      "evidence": "{\n  \"ok\": true,\n  \"source\": \"https://api.imd.fun/openapi.json\",\n  \"historical_capture\": true,\n  \"network_used\": false,\n  \"report\": {\n    \"ok\": true,\n    \"files\": 1,\n    \"bytes\": 23132,\n    \"entries\": [\n      {\n        \"name\": \"docs/imd/openapi.json\",\n        \"bytes\": 23132\n      }\n    ],\n    \"counts_complete\": true,\n    \"archive_sha256\": \"42d1235c4a5ba62d46e4aced9ace0875193cc2dbd82094f550766edc26d920f7\",\n    \"archive_bytes\": 4780,\n    \"preflight\": {\n      \"entries\": 1,\n      \"directory_bytes\": 67,\n      \"zip64\": false\n    },\n    \"content_checked\": false\n  },\n  \"byte_budget_refused\": true,\n  \"directory_refusal\": \"directory byte limit exceeded before ZIP parsing\",\n  \"digest_bound_payload_validation_passed\": true,\n  \"extracted\": false\n}\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipdiff",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipdiff/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 16,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "est_missing_or_invalid_approval_before_read (__main__.DiffTests.test_missing_or_invalid_approval_before_read) ... ok\ntest_no_writes_and_negative_delta (__main__.DiffTests.test_no_writes_and_negative_delta) ... ok\ntest_one_deadline_covers_both_archives (__main__.DiffTests.test_one_deadline_covers_both_archives) ... ok\ntest_repack_and_explicit_parents_are_same_tree (__main__.DiffTests.test_repack_and_explicit_parents_are_same_tree) ... ok\ntest_same_size_content_change (__main__.DiffTests.test_same_size_content_change) ... ok\ntest_symlink_and_outside_paths (__main__.DiffTests.test_symlink_and_outside_paths) ... ok\ntest_type_swap_both_directions (__main__.DiffTests.test_type_swap_both_directions) ... ok\ntest_unsafe_archive_either_side (__main__.DiffTests.test_unsafe_archive_either_side) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.217s\n\nOK\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipdiff",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipdiff/demo.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "14d6a1c9433d5e97aced488939b2ac12521c91b1ae99de2dad6b35d13da7e328",
+      "evidence": "1b593e1faff5a5a04dfdab9fbadb9f\",\n    \"after_sha256\": \"c940047b4d5dfb4c3baf372d9ea8309493719be9016d865c1181b864017cd072\",\n    \"archive_bytes_equal\": false,\n    \"trees_equal\": false,\n    \"before_nodes\": 3,\n    \"after_nodes\": 3,\n    \"before_bytes\": 23132,\n    \"after_bytes\": 23132,\n    \"byte_delta\": 0,\n    \"unchanged_nodes\": 2,\n    \"counts\": {\n      \"added\": 0,\n      \"removed\": 0,\n      \"type_changed\": 0,\n      \"content_changed\": 1\n    },\n    \"changes\": [\n      {\n        \"path\": \"docs/imd/openapi.json\",\n        \"change\": \"content_changed\",\n        \"before\": {\n          \"kind\": \"file\",\n          \"bytes\": 23132,\n          \"sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\"\n        },\n        \"after\": {\n          \"kind\": \"file\",\n          \"bytes\": 23132,\n          \"sha256\": \"764091492865576d86286c79317f95908dedcec124030b2f884299403c8ecbbd\"\n        }\n      }\n    ]\n  }\n}\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipexpect",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipexpect/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 24,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "ry_limit (__main__.ExpectTests.test_policy_entry_limit) ... ok\ntest_policy_loader (__main__.ExpectTests.test_policy_loader) ... ok\ntest_policy_order_irrelevant (__main__.ExpectTests.test_policy_order_irrelevant) ... ok\ntest_policy_shape (__main__.ExpectTests.test_policy_shape) ... ok\ntest_replaced_archive_before_extraction (__main__.ExpectTests.test_replaced_archive_before_extraction) ... ok\ntest_same_size_wrong_content (__main__.ExpectTests.test_same_size_wrong_content) ... ok\ntest_unexpected_empty_directory (__main__.ExpectTests.test_unexpected_empty_directory) ... ok\ntest_unsafe_member_not_ignored (__main__.ExpectTests.test_unsafe_member_not_ignored) ... ok\ntest_uppercase_hash (__main__.ExpectTests.test_uppercase_hash) ... ok\ntest_wrong_size (__main__.ExpectTests.test_wrong_size) ... ok\n\n----------------------------------------------------------------------\nRan 24 tests in 0.235s\n\nOK\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipexpect",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipexpect/demo.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "45a9293aa7a6c24b9106f295ad6646332cee2d05f2b3eb84a6809d8f46eee685",
+      "evidence": "{\n  \"ok\": true,\n  \"network_used\": false,\n  \"source\": \"https://api.imd.fun/openapi.json\",\n  \"historical_capture\": true,\n  \"extra_file_refused\": \"expected file paths differ from archive\",\n  \"extracted_bytes_identical\": true,\n  \"report\": {\n    \"ok\": true,\n    \"mode\": \"extract\",\n    \"archive_sha256\": \"88d94db1dd143baf5ebdc805f5e42dfa436173eba9874f4fc5c2ead769d750ff\",\n    \"expected_files\": 1,\n    \"expected_content_matched\": true,\n    \"total_bytes\": 23132,\n    \"preflight\": {\n      \"entries\": 1,\n      \"directory_bytes\": 63,\n      \"zip64\": false\n    }\n  }\n}\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipgate",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipgate/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 28,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "s_gate (__main__.GateTests.test_replacement_cannot_bypass_gate) ... ok\ntest_seeded_many_valid_layouts (__main__.GateTests.test_seeded_many_valid_layouts) ... ok\ntest_sfx_prefix (__main__.GateTests.test_sfx_prefix) ... ok\ntest_spoofed_count_high (__main__.GateTests.test_spoofed_count_high) ... ok\ntest_spoofed_count_low (__main__.GateTests.test_spoofed_count_low) ... ok\ntest_stored_and_deflated_extract (__main__.GateTests.test_stored_and_deflated_extract) ... ok\ntest_trailing_bytes (__main__.GateTests.test_trailing_bytes) ... ok\ntest_truncation_every_offset (__main__.GateTests.test_truncation_every_offset) ... ok\ntest_zip64_locator_hidden_in_member_comment (__main__.GateTests.test_zip64_locator_hidden_in_member_comment) ... ok\ntest_zip64_markers (__main__.GateTests.test_zip64_markers) ... ok\n\n----------------------------------------------------------------------\nRan 28 tests in 0.223s\n\nOK\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipgate",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipgate/demo.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "5f9b71595ac5ac31992c3b439bf445635b8d9c46c5f62a0d59f8013e23a10463",
+      "evidence": "{\n  \"ok\": true,\n  \"network_used\": false,\n  \"source\": \"https://api.imd.fun/openapi.json\",\n  \"source_bytes\": 23132,\n  \"source_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"large_directory_refused\": \"directory byte limit exceeded before ZIP parsing\",\n  \"extracted_bytes_identical\": true,\n  \"report\": {\n    \"ok\": true,\n    \"mode\": \"extract\",\n    \"entries\": [\n      {\n        \"path\": \"docs/imd/openapi.json\",\n        \"kind\": \"file\",\n        \"bytes\": 23132,\n        \"sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\"\n      }\n    ],\n    \"total_bytes\": 23132,\n    \"content_checked\": true,\n    \"archive_sha256\": \"a19b6d49f1bad5d27b51696e8050555390f1a006fc3420c87d57c8782257c718\",\n    \"preflight\": {\n      \"entries\": 1,\n      \"directory_bytes\": 67,\n      \"zip64\": false\n    }\n  }\n}\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipmanifest",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipmanifest/demo.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "6ec72de2f83d7cf285572c8b5998a0e2bcf41564bcf68ddf851efa6acd6e1d7a",
+      "evidence": "{\n  \"ok\": true,\n  \"safe_manifest\": {\n    \"archive_bytes\": 236,\n    \"archive_sha256\": \"f6a15092f80f5e02929b0e9045df64f7c72e89c1efe1b513724132fa114c20a0\",\n    \"entries\": [\n      {\n        \"bytes\": 16,\n        \"kind\": \"file\",\n        \"path\": \"docs/readme.txt\",\n        \"sha256\": \"23018c49e1d72f88ef9d2ed95165f7c6b42169a6a78a34101a6ba34a23d95eb8\"\n      },\n      {\n        \"kind\": \"directory\",\n        \"path\": \"empty/\"\n      }\n    ],\n    \"entry_count\": 2,\n    \"file_bytes\": 16,\n    \"ok\": true\n  },\n  \"unsafe_archive_refused\": \"unsafe member path: '../escape.txt'\"\n}\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipmerge",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipmerge/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 15,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "traction_failure_removes_stage (__main__.MergeTests.test_later_extraction_failure_removes_stage) ... ok\ntest_output_existing_or_symlink (__main__.MergeTests.test_output_existing_or_symlink) ... ok\ntest_plan_creates_nothing (__main__.MergeTests.test_plan_creates_nothing) ... ok\ntest_shared_directories_and_exact_limits (__main__.MergeTests.test_shared_directories_and_exact_limits) ... ok\ntest_shared_limits_refuse_without_output (__main__.MergeTests.test_shared_limits_refuse_without_output) ... ok\ntest_symlink_member_blocks_all (__main__.MergeTests.test_symlink_member_blocks_all) ... ok\ntest_unsafe_later_archive_blocks_all (__main__.MergeTests.test_unsafe_later_archive_blocks_all) ... ok\ntest_wrong_digest_and_replaced_archive (__main__.MergeTests.test_wrong_digest_and_replaced_archive) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.182s\n\nOK\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipmerge",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipmerge/demo.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "c0015cce998a9533bc0bed63e89544760c9b14b235d50a163153a5cc56898b0c",
+      "evidence": "\n    \"mode\": \"extract\",\n    \"all_payloads_checked\": true,\n    \"archives\": [\n      {\n        \"archive\": \"test/scratch/zipmerge-demo-jb_8jcjm/capture.zip\",\n        \"archive_sha256\": \"42d1235c4a5ba62d46e4aced9ace0875193cc2dbd82094f550766edc26d920f7\",\n        \"entries\": 1,\n        \"preflight\": {\n          \"entries\": 1,\n          \"directory_bytes\": 67,\n          \"zip64\": false\n        }\n      },\n      {\n        \"archive\": \"test/scratch/zipmerge-demo-jb_8jcjm/source.zip\",\n        \"archive_sha256\": \"0de6562e3e0b9931abdb7ad123db5befb163e6ca76475a76727987b2cafa7934\",\n        \"entries\": 1,\n        \"preflight\": {\n          \"entries\": 1,\n          \"directory_bytes\": 66,\n          \"zip64\": false\n        }\n      }\n    ],\n    \"totals\": {\n      \"archives\": 2,\n      \"entries\": 2,\n      \"nodes\": 4,\n      \"uncompressed_bytes\": 23441\n    },\n    \"output\": \"test/scratch/zipmerge-demo-jb_8jcjm/combined\"\n  }\n}\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipselect",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipselect/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 30,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "ionTests.test_sorted_files_shared_parents) ... ok\ntest_unselected_case_collision_is_rejected (__main__.SelectionTests.test_unselected_case_collision_is_rejected) ... ok\ntest_unselected_corrupt_payload_is_rejected (__main__.SelectionTests.test_unselected_corrupt_payload_is_rejected) ... ok\ntest_unselected_resource_limit_is_enforced (__main__.SelectionTests.test_unselected_resource_limit_is_enforced) ... ok\ntest_unselected_symlink_is_rejected (__main__.SelectionTests.test_unselected_symlink_is_rejected) ... ok\ntest_unselected_traversal_is_rejected (__main__.SelectionTests.test_unselected_traversal_is_rejected) ... ok\ntest_uppercase_approval_and_tuple (__main__.SelectionTests.test_uppercase_approval_and_tuple) ... ok\ntest_zero_length_file (__main__.SelectionTests.test_zero_length_file) ... ok\n\n----------------------------------------------------------------------\nRan 30 tests in 0.354s\n\nOK\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipselect",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipselect/demo.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "6c72487c238ce32c7cf7239d75597ec625c6dd9cebe1fd507d198f9c84a93ac3",
+      "evidence": "ue,\n  \"network_used\": false,\n  \"source\": \"https://api.imd.fun/openapi.json\",\n  \"historical_public_capture_bytes\": 23132,\n  \"selected_content_identical\": true,\n  \"unselected_paths_absent\": true,\n  \"small_node_budget_refused\": \"selected output node limit exceeded\",\n  \"report\": {\n    \"ok\": true,\n    \"mode\": \"extract\",\n    \"archive_sha256\": \"814121c19246c459c682733668714bf1407b555dc871874afccc9791de5f67ff\",\n    \"all_archive_payloads_checked\": true,\n    \"preflight\": {\n      \"entries\": 3,\n      \"directory_bytes\": 204,\n      \"zip64\": false\n    },\n    \"archive_entries\": 3,\n    \"archive_total_bytes\": 23161,\n    \"selected_files\": 1,\n    \"output_nodes\": 3,\n    \"output_bytes\": 23132,\n    \"entries\": [\n      {\n        \"path\": \"docs/imd/openapi.json\",\n        \"kind\": \"file\",\n        \"bytes\": 23132,\n        \"sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\"\n      }\n    ]\n  }\n}\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipverify",
+      "kind": "check",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipverify/selftest.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 28,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "d_by_file (__main__.VerificationTests.test_parent_replaced_by_file) ... ok\ntest_root_regular_file (__main__.VerificationTests.test_root_regular_file) ... ok\ntest_root_symlink (__main__.VerificationTests.test_root_symlink) ... ok\ntest_same_size_changed_content (__main__.VerificationTests.test_same_size_changed_content) ... ok\ntest_shorter_content (__main__.VerificationTests.test_shorter_content) ... ok\ntest_unexpected_file (__main__.VerificationTests.test_unexpected_file) ... ok\ntest_unselected_archive_file_is_extra (__main__.VerificationTests.test_unselected_archive_file_is_extra) ... ok\ntest_workspace_confinement_without_external_read (__main__.VerificationTests.test_workspace_confinement_without_external_read) ... ok\ntest_wrong_digest (__main__.VerificationTests.test_wrong_digest) ... ok\n\n----------------------------------------------------------------------\nRan 28 tests in 0.236s\n\nOK\n"
+    },
+    {
+      "line": 2,
+      "tool": "zipverify",
+      "kind": "demo",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/zipverify/demo.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "b022f0bd0104151ee7dd4f04af826329007b69a43700eba9c0c871483451b149",
+      "evidence": "{\n  \"ok\": true,\n  \"network_used\": false,\n  \"historical_public_capture\": \"https://api.imd.fun/openapi.json\",\n  \"capture_bytes\": 23132,\n  \"verification\": {\n    \"ok\": true,\n    \"mode\": \"verify-selected\",\n    \"archive_sha256\": \"553dba8614f4dc8670815620cf421e835658459ea66f7eb98f9404a49efec348\",\n    \"all_archive_payloads_checked\": true,\n    \"exact_selected_tree\": true,\n    \"selected_files\": 1,\n    \"nodes_checked\": 3,\n    \"bytes_checked\": 23132,\n    \"preflight\": {\n      \"entries\": 3,\n      \"directory_bytes\": 194,\n      \"zip64\": false\n    }\n  },\n  \"same_length_tampering_refused\": \"content differs: 'docs/imd/openapi.json'\",\n  \"tampered_content_left_untouched\": true\n}\n"
+    }
+  ],
+  "summary": [
+    {
+      "line": 1,
+      "tools": 14,
+      "commands": 30,
+      "unittest_cases": 106,
+      "failures": 0
+    },
+    {
+      "line": 2,
+      "tools": 11,
+      "commands": 21,
+      "unittest_cases": 251,
+      "failures": 0
+    }
+  ]
+}

@@ -1,0 +1,1521 @@
+{
+  "round": 35,
+  "scope": "Every tool selftest and demo in lines 3 and 4",
+  "source_review": "All Python sources parsed and their imports/call targets and I/O sites reviewed before execution. Shared loaders, FallbackHeaders implementation/tests and exceptional test paths read in full. RPC methods are mocked in offline tests. No described API operation called.",
+  "sources": [
+    {
+      "path": "line-3/tools/batchintake/batchintake.py",
+      "sha256": "f0d95967e121c7db5da102777c71225346a6149b1579fdd94b69e6919e9cdf70"
+    },
+    {
+      "path": "line-3/tools/batchintake/selftest.py",
+      "sha256": "d0027f0c94340ba53e7e3a0e5c21989e89e05e65121807253cc1736afc6777be"
+    },
+    {
+      "path": "line-3/tools/boundaudit/boundaudit.py",
+      "sha256": "aed7426c07bba6bc86643c8fb63221794610f44f79eae3ee669e539be556b246"
+    },
+    {
+      "path": "line-3/tools/boundaudit/selftest.py",
+      "sha256": "71c1c384657c5c993510c1c4678c537ca79373daff7267274b4039b6fadbb3ca"
+    },
+    {
+      "path": "line-3/tools/rewardaudit/rewardaudit.py",
+      "sha256": "fc1da6ddd161e750ce616c51c784a916f50477f7e21a33c172fec638b28293c9"
+    },
+    {
+      "path": "line-3/tools/rewardaudit/selftest.py",
+      "sha256": "a86b96b34f9281ad8f57cecf94c0d1da850f66438ec2aaa9d0af1cb8dececcdc"
+    },
+    {
+      "path": "line-3/tools/rewardbatch/rewardbatch.py",
+      "sha256": "bf98a74afdf3d2735f7c7dfc34465bf48fe2a24bb3304eaf5d06fecfb1a4baf5"
+    },
+    {
+      "path": "line-3/tools/rewardbatch/selftest.py",
+      "sha256": "16bc3b18a682170f749cdd6f5afa6809598e58c9e66162614db9e2c7f0ff3dbf"
+    },
+    {
+      "path": "line-3/tools/rewardbounds/rewardbounds.py",
+      "sha256": "43ef21f2f121936ac4269d5d0a1ae1b134adb237abdbb53a42f82e091e6474dd"
+    },
+    {
+      "path": "line-3/tools/rewardbounds/selftest.py",
+      "sha256": "f0b55d78471c83209d6160f97624a7df333c42770e6567e521827a8d363daf7d"
+    },
+    {
+      "path": "line-3/tools/rewardcompare/rewardcompare.py",
+      "sha256": "98b8bb29b23c98dc9b1a663638a0cd9b6748b19d9ce8c9e51fb56314534a19d7"
+    },
+    {
+      "path": "line-3/tools/rewardcompare/selftest.py",
+      "sha256": "408b7bc73df484b869f899d99667542e1e6580f236e93d11b7d57fae43e0d15c"
+    },
+    {
+      "path": "line-3/tools/rewardcsv/rewardcsv.py",
+      "sha256": "4dbcba7aff019b5ff15794994ba391981a462e555c400155108a6f7a6e75cab5"
+    },
+    {
+      "path": "line-3/tools/rewardcsv/selftest.py",
+      "sha256": "e04685d3a03c6862517dc3869a3b6c4a7dc1f2055aa3b8389ebe878ebdb09641"
+    },
+    {
+      "path": "line-3/tools/rewardmerge/rewardmerge.py",
+      "sha256": "c18fddfeac80e8b6801e892fd2010fdaf95776269da9c606ddc07d9dcfe5c17f"
+    },
+    {
+      "path": "line-3/tools/rewardmerge/selftest.py",
+      "sha256": "c6f611b4b30c33b7c8132c999d70ec5155dc201d1d8b7d526cd8dfac3192b383"
+    },
+    {
+      "path": "line-3/tools/rewardproof/rewardproof.py",
+      "sha256": "ccbe66d9e7fdd2bee8d20176d77c5153a329ec5f1b6ccc50660652d6dc424529"
+    },
+    {
+      "path": "line-3/tools/rewardproof/selftest.py",
+      "sha256": "1d4d534ed55474ef3e7b376082e6d9c9b3657b21784b4dbf9bdd8d78a1c8700f"
+    },
+    {
+      "path": "line-3/tools/rewardreceipt/rewardreceipt.py",
+      "sha256": "0d1536ece1b0c6761ce3e4ec0ec1ef90a37e11b82622d6c941a98821a6a321ec"
+    },
+    {
+      "path": "line-3/tools/rewardreceipt/selftest.py",
+      "sha256": "5c3f6dba19df537f5106c19f4c4dc19b229e64fbbd750f7c7f4cc42cf46dccdb"
+    },
+    {
+      "path": "line-3/tools/rewardsplit/rewardsplit.py",
+      "sha256": "f75b31fc0d2e644b3a5bb5b28e3e18695c1aa8a23a4d9a53ad2c51f70b76b637"
+    },
+    {
+      "path": "line-3/tools/rewardsplit/selftest.py",
+      "sha256": "026d7285461f9361c0c575671c4af81464255fc36ff32524f25dc3bfad728e94"
+    },
+    {
+      "path": "line-3/tools/rewardtarget/rewardtarget.py",
+      "sha256": "44aa7c1e69e4827049e086e59be44d99537b410c71a491b5dd75d8959d48a4e0"
+    },
+    {
+      "path": "line-3/tools/rewardtarget/selftest.py",
+      "sha256": "b5e5e74316261829e87084d594abb04eb4438d696bd6af9beb1fa6d4330519d3"
+    },
+    {
+      "path": "line-3/tools/rewardwindow/rewardwindow.py",
+      "sha256": "33831b883a29b28769a69d0727a2430e71795b73c737f1029180978dbb94993f"
+    },
+    {
+      "path": "line-3/tools/rewardwindow/selftest.py",
+      "sha256": "2532379af251f748467b26ee2fb31d1561059d88a3e8cc8ceebb9febfc496627"
+    },
+    {
+      "path": "line-4/tools/apidelta/apidelta.py",
+      "sha256": "9331dfe89870e60d63da4653d108aeb6621474b662c63ab8cc30082fcdf0b589"
+    },
+    {
+      "path": "line-4/tools/apidelta/selftest.py",
+      "sha256": "124a035bf4b33dd5ca191869f36b629716a7846ae75dd2188cd9c23f5eb3212d"
+    },
+    {
+      "path": "line-4/tools/authcheck/authcheck.py",
+      "sha256": "b600bac9e0597cc292102525dee8fc4519ace89839359fd1f95a69a67308b1f4"
+    },
+    {
+      "path": "line-4/tools/authcheck/selftest.py",
+      "sha256": "0017586fbb035ae7a377e6d357f89e6a03b224a25fe29814355fc1de51df4d3e"
+    },
+    {
+      "path": "line-4/tools/boundcheck/boundcheck.py",
+      "sha256": "ad7fc5ccf92017fe2864f95be3cfbe73739afed08c784a4c828314083fc639e6"
+    },
+    {
+      "path": "line-4/tools/boundcheck/selftest.py",
+      "sha256": "5742b4b3fa7a1c35bdd75b43e3095b191f26a347c7e4180dcafa4582a1bc2fcd"
+    },
+    {
+      "path": "line-4/tools/constcheck/constcheck.py",
+      "sha256": "b704936a3507107cfc5ffe100108eb2a1e6987c719a35f453fd79842573fc6be"
+    },
+    {
+      "path": "line-4/tools/constcheck/selftest.py",
+      "sha256": "ab2642f57b0bf60f03067ed75f2baadb4c821355d77b5688a98f18785b4a2d43"
+    },
+    {
+      "path": "line-4/tools/dependcheck/dependcheck.py",
+      "sha256": "d699701012be84d775c024fc75917d354f24ae2b202fd052053fbe1a0ff5a3bf"
+    },
+    {
+      "path": "line-4/tools/dependcheck/selftest.py",
+      "sha256": "50032d1fabc734cf37c5e6634881e824aec772fd3743c863d893abe538d57020"
+    },
+    {
+      "path": "line-4/tools/fallbackheaders/fallbackheaders.py",
+      "sha256": "fa1e518516c966bcc6fb9ef10a567455f99a707fcffaf13223cd41932a49d6c8"
+    },
+    {
+      "path": "line-4/tools/fallbackheaders/selftest.py",
+      "sha256": "673684e77663c683bcaade53115352510fcba952584051c706394e4188459e54"
+    },
+    {
+      "path": "line-4/tools/headercheck/headercheck.py",
+      "sha256": "7c08c475edee943f41493de21599f39d7d2fd684892990e39cd6c94c5bd6752c"
+    },
+    {
+      "path": "line-4/tools/headercheck/selftest.py",
+      "sha256": "d5bd6ac5ecedde0f8962445392b26eeb9b8bfcd5e4acb7d72209cff98d36afc1"
+    },
+    {
+      "path": "line-4/tools/idcheck/idcheck.py",
+      "sha256": "a3aea035c099dd7de0a10b4a7329eaf10c851a477fa110c2a8915d5236efb138"
+    },
+    {
+      "path": "line-4/tools/idcheck/selftest.py",
+      "sha256": "1c7be30fe932af576ddd56d5a9acd45338c7a3e5a80a39ac7f0ae66bd2a27351"
+    },
+    {
+      "path": "line-4/tools/multiplecheck/multiplecheck.py",
+      "sha256": "2fb144bc429388dadea917e0125cf5f64becd2c144835873abe77047f02d540d"
+    },
+    {
+      "path": "line-4/tools/multiplecheck/selftest.py",
+      "sha256": "0ec5f8ef92de873993819445849d423517d2e567be9550bd62aacde4c4a35c2e"
+    },
+    {
+      "path": "line-4/tools/oauthcheck/oauthcheck.py",
+      "sha256": "8e7814cdda548e2aeea4f328f70bf66251862be304d61fb2d7fe37706f8102e1"
+    },
+    {
+      "path": "line-4/tools/oauthcheck/selftest.py",
+      "sha256": "5cfb2f149e4a825d307136ce07754caae205785d23be55ed0be1d12cca2802d8"
+    },
+    {
+      "path": "line-4/tools/paramcheck/paramcheck.py",
+      "sha256": "19d48b98672644612dd943bc116701219c52b3159fa30457df7e32e49adcdf4b"
+    },
+    {
+      "path": "line-4/tools/paramcheck/selftest.py",
+      "sha256": "2616593085e9d9a5a31d29a9dd532e1a6c9ab49ffde7f8bfc6d2db6e071fd26a"
+    },
+    {
+      "path": "line-4/tools/schemecheck/schemecheck.py",
+      "sha256": "60d13c0a3d341f39df26de9094f551decf85f412beb515ef81e5bec614fcbc5a"
+    },
+    {
+      "path": "line-4/tools/schemecheck/selftest.py",
+      "sha256": "8995fbd088c2bc957ce6f01af55f34d098a2e85acfe45e7da52084ea1e9ffece"
+    },
+    {
+      "path": "line-4/tools/servercheck/selftest.py",
+      "sha256": "be436534bbcaed0ccfc2a683cc846deb31a782fc9b2288c607a8ee07942768b5"
+    },
+    {
+      "path": "line-4/tools/servercheck/servercheck.py",
+      "sha256": "6d34cbb8cf5ba3c8ac8d09ba213b42dca2c98f2dbcba4480b0615ebf6ce009e0"
+    },
+    {
+      "path": "line-4/tools/statuscheck/selftest.py",
+      "sha256": "3c090621da91c320f6462a4780c8d1db3cacf8105b5fdba99be332dbeaaaa71c"
+    },
+    {
+      "path": "line-4/tools/statuscheck/statuscheck.py",
+      "sha256": "102bf4d3fad5f40feda5b695c083e1def8319366fbca7815df65b5e537ecc64e"
+    },
+    {
+      "path": "line-4/tools/uniquecheck/selftest.py",
+      "sha256": "a66c7d1a4961715e0dc05db3af147f24817d6b4697f21bd1de198a4db5d71a69"
+    },
+    {
+      "path": "line-4/tools/uniquecheck/uniquecheck.py",
+      "sha256": "c8153790ed62c504eadc174085309a081536e847a3b7d2a5128fdcaa31ffc30a"
+    }
+  ],
+  "results": [
+    {
+      "line": 3,
+      "tool": "batchintake",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-3/tools/batchintake/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/batchintake/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 12,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "............\n----------------------------------------------------------------------\nRan 12 tests in 1.119s\n\nOK\n"
+    },
+    {
+      "line": 3,
+      "tool": "batchintake",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-3/tools/batchintake/batchintake.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/batchintake/batchintake.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "0d997cb952f436a0b1b3a0949ce36430a323c41b12d066c9a89aa8afe24b6a27",
+      "evidence": " \"666666666666666667\",\n    \"budget_units\": \"1000000000000000000\",\n    \"scope\": \"review-file completeness only; not approval, entitlement, payment progress or replay protection\"\n  },\n  \"complete_out_of_order\": {\n    \"schema\": \"batchintake-status-v1\",\n    \"status\": \"complete\",\n    \"bundle_sha256\": \"c7fc118104a2e18ad7df6e485e005feab9f0b9f700e151018a3d29716133cede\",\n    \"delivery_sha256\": \"82c82f40a3454f7eab72a647da862f81894646a6e098cad8856c2108d3195d72\",\n    \"report_sha256\": \"b6a779dc9458a76fe457f9f3d8c4f5aeb1644f168dc5f5f11c8c118bc431ae9a\",\n    \"received_batches\": [\n      1,\n      2\n    ],\n    \"missing_batches\": [],\n    \"received_rows\": 3,\n    \"missing_rows\": 0,\n    \"received_units\": \"1000000000000000000\",\n    \"missing_units\": \"0\",\n    \"budget_units\": \"1000000000000000000\",\n    \"scope\": \"review-file completeness only; not approval, entitlement, payment progress or replay protection\"\n  }\n}\n"
+    },
+    {
+      "line": 3,
+      "tool": "boundaudit",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-3/tools/boundaudit/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/boundaudit/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 12,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "der_and_row_field_tampering) ... ok\ntest_invalid_requests_metadata_and_json (__main__.AuditTests.test_invalid_requests_metadata_and_json) ... ok\ntest_large_compact_report (__main__.AuditTests.test_large_compact_report) ... ok\ntest_minima_only_zero_weight_and_zero_capacity (__main__.AuditTests.test_minima_only_zero_weight_and_zero_capacity) ... ok\ntest_multiple_caps_exact_levels_and_ties (__main__.AuditTests.test_multiple_caps_exact_levels_and_ties) ... ok\ntest_non_tied_wrong_winner (__main__.AuditTests.test_non_tied_wrong_winner) ... ok\ntest_seeded_feasible_policies_and_exhaustive_awards (__main__.AuditTests.test_seeded_feasible_policies_and_exhaustive_awards) ... ok\ntest_uint256_fractional_weights_and_permutation (__main__.AuditTests.test_uint256_fractional_weights_and_permutation) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.844s\n\nOK\n"
+    },
+    {
+      "line": 3,
+      "tool": "boundaudit",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-3/tools/boundaudit/boundaudit.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/boundaudit/boundaudit.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "76ac92fbfd8deed5ef6adf28a8d06cedca0bf32fae7e5127d6e740b2c2eaedef",
+      "evidence": "{\n  \"schema\": \"boundaudit-v1\",\n  \"result\": \"passed independent bounded-allocation arithmetic audit\",\n  \"budget_units\": \"1000000000000000000\",\n  \"contributors\": 4,\n  \"waterfill_level_fraction\": \"150000000000000000\",\n  \"rounding_units_distributed\": 0,\n  \"checks\": [\n    \"sorted cap-threshold integration\",\n    \"exact rational quotas and floors\",\n    \"rounding winner/loser boundary and ASCII ties\",\n    \"bounds and budget conservation\",\n    \"complete report fields and JSON types\"\n  ],\n  \"request_sha256\": \"8e0fd4c5fd8b46491263f6e845c20d51eeb048fceb34fd85a16e081c4178bd80\",\n  \"metadata_sha256\": \"26804407dd1eb430871bd2b218a59974835e3fe5020829a7c8c1f25ff41465ec\",\n  \"report_sha256\": \"6bbf3187a8756a55f0b12b6388ee32fbeb53f543eeb8270a2eb08d0e5126e3b7\",\n  \"scope\": \"arithmetic only; shared input validation; historical metadata; no entitlement, identity, balance or payment proof\"\n}\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardaudit",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardaudit/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardaudit/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 13,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "tTests.test_no_rounding_and_zero_weights) ... ok\ntest_order_independence_and_alias_isolation (__main__.AuditTests.test_order_independence_and_alias_isolation) ... ok\ntest_output_bound (__main__.AuditTests.test_output_bound) ... ok\ntest_real_public_address_consistency (__main__.AuditTests.test_real_public_address_consistency) ... ok\ntest_report_mutations (__main__.AuditTests.test_report_mutations) ... ok\ntest_small_exhaustive_subset_oracle (__main__.AuditTests.test_small_exhaustive_subset_oracle) ... ok\ntest_uint256_and_fractional_weights (__main__.AuditTests.test_uint256_and_fractional_weights) ... ok\ntest_wrong_remainder_winner (__main__.AuditTests.test_wrong_remainder_winner) ... ok\ntest_wrong_tie_winner_preserving_total (__main__.AuditTests.test_wrong_tie_winner_preserving_total) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 0.500s\n\nOK\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardaudit",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardaudit/rewardaudit.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardaudit/rewardaudit.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "d38b989e50d13d9fe77d7cda07eb72b921f41103690a724ee601ac8fe3dd5c24",
+      "evidence": "\n  \"contributors\": [\n    {\n      \"id\": \"build\",\n      \"quota_units_fraction\": \"1000000000000000000/3\",\n      \"floor_units\": \"333333333333333333\",\n      \"remainder_fraction\": \"1/3\",\n      \"rounding_unit_awarded\": true,\n      \"units\": \"333333333333333334\"\n    },\n    {\n      \"id\": \"research\",\n      \"quota_units_fraction\": \"1000000000000000000/3\",\n      \"floor_units\": \"333333333333333333\",\n      \"remainder_fraction\": \"1/3\",\n      \"rounding_unit_awarded\": false,\n      \"units\": \"333333333333333333\"\n    },\n    {\n      \"id\": \"review\",\n      \"quota_units_fraction\": \"1000000000000000000/3\",\n      \"floor_units\": \"333333333333333333\",\n      \"remainder_fraction\": \"1/3\",\n      \"rounding_unit_awarded\": false,\n      \"units\": \"333333333333333333\"\n    }\n  ],\n  \"scope\": \"offline arithmetic only; shared input validators, independent integer quota check; no entitlement, identity, balance or payment proof\"\n}\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardbatch",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardbatch/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardbatch/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 11,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.963s\n\nOK\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardbatch",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardbatch/rewardbatch.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardbatch/rewardbatch.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "2ae2c3810b372411be398ebc10a2bdc2fe6d375d6d6addf471487f5701dcbeb7",
+      "evidence": "        \"rows_sha256\": \"b4221e9e64b876b6b1fa14b56286abaa391466d5b0b6aba079c8989a20302f73\",\n        \"allocations\": [\n          {\n            \"amount\": \"0.333333333333333333\",\n            \"id\": \"review\",\n            \"rounding_unit_awarded\": false,\n            \"units\": \"333333333333333333\",\n            \"weight_fraction\": \"1\"\n          }\n        ]\n      }\n    ]\n  },\n  \"verification\": {\n    \"schema\": \"rewardbatch-verification-v1\",\n    \"result\": \"verified complete exact partition\",\n    \"bundle_sha256\": \"c7fc118104a2e18ad7df6e485e005feab9f0b9f700e151018a3d29716133cede\",\n    \"report_sha256\": \"b6a779dc9458a76fe457f9f3d8c4f5aeb1644f168dc5f5f11c8c118bc431ae9a\",\n    \"batch_count\": 2,\n    \"contributor_count\": 3,\n    \"budget_units\": \"1000000000000000000\",\n    \"batched_units\": \"1000000000000000000\",\n    \"scope\": \"offline review batches only; no transaction, payment, entitlement or authorization\"\n  }\n}\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardbounds",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardbounds/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardbounds/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 15,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "t_metadata_and_output_bounds) ... ok\ntest_multiple_caps_and_rounding_tie (__main__.BoundsTests.test_multiple_caps_and_rounding_tie) ... ok\ntest_no_bounds_matches_original_allocator (__main__.BoundsTests.test_no_bounds_matches_original_allocator) ... ok\ntest_outside_workspace_refused_before_read (__main__.BoundsTests.test_outside_workspace_refused_before_read) ... ok\ntest_permutation_is_byte_identical (__main__.BoundsTests.test_permutation_is_byte_identical) ... ok\ntest_seeded_exhaustive_oracle (__main__.BoundsTests.test_seeded_exhaustive_oracle) ... ok\ntest_tampering_types_and_request_disagreement (__main__.BoundsTests.test_tampering_types_and_request_disagreement) ... ok\ntest_uint256_and_fractional_weight_precision (__main__.BoundsTests.test_uint256_and_fractional_weight_precision) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.595s\n\nOK\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardbounds",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardbounds/rewardbounds.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardbounds/rewardbounds.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "4785d6968fc2c01d8c9c80267cac2389da937138e77a735c5476ce04e93e2a41",
+      "evidence": "0000000000000000\",\n        \"maximum_units\": \"500000000000000000\",\n        \"discretionary_quota_fraction\": \"0\",\n        \"rounding_unit_awarded\": false,\n        \"units\": \"100000000000000000\",\n        \"amount\": \"0.100000000000000000\",\n        \"at_minimum\": true,\n        \"at_maximum\": false\n      }\n    ]\n  },\n  \"verification\": {\n    \"schema\": \"rewardbounds-verification-v1\",\n    \"result\": \"verified bounded allocation by complete recomputation\",\n    \"budget_units\": \"1000000000000000000\",\n    \"contributors\": 4,\n    \"request_sha256\": \"8e0fd4c5fd8b46491263f6e845c20d51eeb048fceb34fd85a16e081c4178bd80\",\n    \"metadata_sha256\": \"26804407dd1eb430871bd2b218a59974835e3fe5020829a7c8c1f25ff41465ec\",\n    \"report_sha256\": \"6bbf3187a8756a55f0b12b6388ee32fbeb53f543eeb8270a2eb08d0e5126e3b7\",\n    \"scope\": \"offline arithmetic and input agreement only; no entitlement, identity, balance or payment verified\"\n  }\n}\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardcompare",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardcompare/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardcompare/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 10,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "_claim_rejected (__main__.CompareTests.test_added_payment_claim_rejected) ... ok\ntest_both_reports_verified (__main__.CompareTests.test_both_reports_verified) ... ok\ntest_capture_change_rejected (__main__.CompareTests.test_capture_change_rejected) ... ok\ntest_changed_roster_or_weights_rejected (__main__.CompareTests.test_changed_roster_or_weights_rejected) ... ok\ntest_demo_cli_review_exit (__main__.CompareTests.test_demo_cli_review_exit) ... ok\ntest_equivalent_weight_notation (__main__.CompareTests.test_equivalent_weight_notation) ... ok\ntest_known_budget_paradox (__main__.CompareTests.test_known_budget_paradox) ... ok\ntest_same_budget_and_permutation (__main__.CompareTests.test_same_budget_and_permutation) ... ok\ntest_uint256_precision (__main__.CompareTests.test_uint256_precision) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.553s\n\nOK\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardcompare",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardcompare/rewardcompare.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardcompare/rewardcompare.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "cfc40fca8afca2161537e20318974d0e94d50ef3755e7cc38da31ddd0a0cae23",
+      "evidence": "ef02a0bd391eb9089470c8080f0a68e\",\n      \"symbol\": \"ZTO\",\n      \"decimals\": 18,\n      \"block_number\": 26205319,\n      \"block_hash\": \"0xa4d2f8165b2b090fe930545d71b952c06e02401f56a892caf8d6f7a8a47d8a9a\"\n    },\n    \"budget_units\": \"26\",\n    \"contributors\": 6,\n    \"request_sha256\": \"132b9ff115d89dcc5f2be92951ca77ffb758015fa141404dd687443719555c9b\",\n    \"metadata_sha256\": \"26804407dd1eb430871bd2b218a59974835e3fe5020829a7c8c1f25ff41465ec\",\n    \"report_sha256\": \"8cb645f390d0ac76494ffbfc1609b87200498bcfdaf980b22fbce7480197cb5d\",\n    \"scope\": \"offline arithmetic and input agreement only; no work, identity, balance, signature, or payment verified\"\n  },\n  \"scope\": \"comparison of two complete allocations, not incremental payments or entitlement; no balance, identity, work or payment verified\",\n  \"warning\": \"largest remainder is not budget-monotonic; review decreases before replacing an allocation\"\n}\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardcsv",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardcsv/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardcsv/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 8,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "........\n----------------------------------------------------------------------\nRan 8 tests in 0.247s\n\nOK\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardcsv",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardcsv/rewardcsv.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardcsv/rewardcsv.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "2ccfd73b3de374d85ff1251b4ec93b7fa9986ee6fdf6e45e2470f7dc59683948",
+      "evidence": "\"id\",\"address\",\"units\",\"amount\",\"rounding_unit_awarded\",\"chain_id\",\"token_address\",\"report_sha256\"\n\"build\",\"\",\"333333333333333334\",\"0.333333333333333334\",\"true\",\"1\",\"0xd782bdea4ef02a0bd391eb9089470c8080f0a68e\",\"b6a779dc9458a76fe457f9f3d8c4f5aeb1644f168dc5f5f11c8c118bc431ae9a\"\n\"research\",\"\",\"333333333333333333\",\"0.333333333333333333\",\"false\",\"1\",\"0xd782bdea4ef02a0bd391eb9089470c8080f0a68e\",\"b6a779dc9458a76fe457f9f3d8c4f5aeb1644f168dc5f5f11c8c118bc431ae9a\"\n\"review\",\"\",\"333333333333333333\",\"0.333333333333333333\",\"false\",\"1\",\"0xd782bdea4ef02a0bd391eb9089470c8080f0a68e\",\"b6a779dc9458a76fe457f9f3d8c4f5aeb1644f168dc5f5f11c8c118bc431ae9a\"\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardmerge",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardmerge/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardmerge/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 11,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.700s\n\nOK\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardmerge",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardmerge/rewardmerge.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardmerge/rewardmerge.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "61be4119257c00612bdbb54ee34cfea40504addd9aa8b0f2ed31857fe159e5ae",
+      "evidence": "ort_sha256\": \"459eb99d7492b3b6c7963b244ca9ae7992d8a49d1f99f704613394cb44a04795\",\n          \"scope\": \"offline arithmetic and input agreement only; no work, identity, balance, signature, or payment verified\"\n        }\n      }\n    ],\n    \"repeated_reports\": [],\n    \"review_required\": false,\n    \"scope\": \"sum of verified independent allocations; repeated reports counted once per round label; no entitlement, identity, balance or payment verified\"\n  },\n  \"verification\": {\n    \"schema\": \"rewardmerge-verification-v1\",\n    \"result\": \"verified cumulative allocation arithmetic\",\n    \"report_sha256\": \"56978e7ff138260b3cdf56e904e6e6499b9d2288313461378fc8ba0ac4e62750\",\n    \"budget_units\": \"3000000000000000000\",\n    \"review_required\": false,\n    \"scope\": \"sum of verified independent allocations; repeated reports counted once per round label; no entitlement, identity, balance or payment verified\"\n  }\n}\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardproof",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardproof/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardproof/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 11,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "...........\n----------------------------------------------------------------------\nRan 11 tests in 1.034s\n\nOK\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardproof",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardproof/rewardproof.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardproof/rewardproof.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "5375ab2a465332d73bac9365e2b45b472a438753e33f3f624f9703aa055f9be3",
+      "evidence": "\n      \"request_sha256\": \"2aab721988a38569c3ebc8a3beb62fe287fa4abde5e657d33022430c2f6d6314\",\n      \"token\": {\n        \"address\": \"0xd782bdea4ef02a0bd391eb9089470c8080f0a68e\",\n        \"block_hash\": \"0xa4d2f8165b2b090fe930545d71b952c06e02401f56a892caf8d6f7a8a47d8a9a\",\n        \"block_number\": 26205319,\n        \"chain_id\": 1,\n        \"decimals\": 18,\n        \"symbol\": \"ZTO\"\n      }\n    },\n    \"allocation\": {\n      \"amount\": \"0.333333333333333334\",\n      \"id\": \"build\",\n      \"rounding_unit_awarded\": true,\n      \"units\": \"333333333333333334\",\n      \"weight_fraction\": \"1\"\n    },\n    \"proof_sha256\": \"122cd93bc37cc8e1d299068c3d900b8ef32b3af8139e39929eaacf85e5ee30a5\",\n    \"scope\": \"inclusion under the supplied root only; no authentication, independent arithmetic audit, entitlement, balance or payment\"\n  },\n  \"demo\": \"Illustrative roles; root created locally for demonstration, not authenticated.\"\n}\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardreceipt",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardreceipt/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardreceipt/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 8,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "test_added_claim_rejected (__main__.ReceiptTests.test_added_claim_rejected) ... ok\ntest_canonical_hash_independent_of_key_order (__main__.ReceiptTests.test_canonical_hash_independent_of_key_order) ... ok\ntest_changed_token_capture_rejected (__main__.ReceiptTests.test_changed_token_capture_rejected) ... ok\ntest_changed_unit_rejected (__main__.ReceiptTests.test_changed_unit_rejected) ... ok\ntest_changed_weights_rejected (__main__.ReceiptTests.test_changed_weights_rejected) ... ok\ntest_duplicate_json_keys_rejected_by_reader (__main__.ReceiptTests.test_duplicate_json_keys_rejected_by_reader) ... ok\ntest_exact_zto_receipt (__main__.ReceiptTests.test_exact_zto_receipt) ... ok\ntest_numeric_type_substitution_rejected (__main__.ReceiptTests.test_numeric_type_substitution_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.003s\n\nOK\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardreceipt",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardreceipt/rewardreceipt.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardreceipt/rewardreceipt.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "b0e8911c43f57dc27ac26bcc20028466d577ba61f8961cd15cd756ea10118ddf",
+      "evidence": "{\n  \"schema\": \"rewardreceipt-v1\",\n  \"result\": \"verified exact RewardSplit allocation\",\n  \"token\": {\n    \"chain_id\": 1,\n    \"address\": \"0xd782bdea4ef02a0bd391eb9089470c8080f0a68e\",\n    \"symbol\": \"ZTO\",\n    \"decimals\": 18,\n    \"block_number\": 26205319,\n    \"block_hash\": \"0xa4d2f8165b2b090fe930545d71b952c06e02401f56a892caf8d6f7a8a47d8a9a\"\n  },\n  \"budget_units\": \"1000000000000000000\",\n  \"contributors\": 3,\n  \"request_sha256\": \"2aab721988a38569c3ebc8a3beb62fe287fa4abde5e657d33022430c2f6d6314\",\n  \"metadata_sha256\": \"26804407dd1eb430871bd2b218a59974835e3fe5020829a7c8c1f25ff41465ec\",\n  \"report_sha256\": \"b6a779dc9458a76fe457f9f3d8c4f5aeb1644f168dc5f5f11c8c118bc431ae9a\",\n  \"scope\": \"offline arithmetic and input agreement only; no work, identity, balance, signature, or payment verified\"\n}\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardsplit",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardsplit/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardsplit/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 19,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "est_reject_metadata_wrong_chain_or_precision (__main__.RewardTests.test_reject_metadata_wrong_chain_or_precision) ... ok\ntest_rpc_rejects_wrong_chain_and_reorg (__main__.RewardTests.test_rpc_rejects_wrong_chain_and_reorg) ... ok\ntest_uint256_boundary (__main__.RewardTests.test_uint256_boundary) ... ok\ntest_writer_accepts_compact_output_at_exact_limit (__main__.RewardTests.test_writer_accepts_compact_output_at_exact_limit) ... ok\ntest_writer_preserves_pretty_output_at_exact_limit (__main__.RewardTests.test_writer_preserves_pretty_output_at_exact_limit) ... ok\ntest_writer_refuses_oversize_before_creating_file_or_stdout (__main__.RewardTests.test_writer_refuses_oversize_before_creating_file_or_stdout) ... ok\ntest_zero_weight_never_wins (__main__.RewardTests.test_zero_weight_never_wins) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.377s\n\nOK\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardsplit",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardsplit/rewardsplit.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardsplit/rewardsplit.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "c5cff3e2b2cfd34bfcf17898b3a85e43b79080f7701052a730b03317b1c4a1ac",
+      "evidence": " \"1000000000000000000\",\n  \"budget_amount\": \"1.000000000000000000\",\n  \"method\": \"largest remainder; equal remainders ordered by ASCII contributor id\",\n  \"rounding_units_distributed\": 1,\n  \"unallocated_units\": \"0\",\n  \"all_recipients_supplied\": false,\n  \"allocations\": [\n    {\n      \"id\": \"build\",\n      \"weight_fraction\": \"1\",\n      \"units\": \"333333333333333334\",\n      \"amount\": \"0.333333333333333334\",\n      \"rounding_unit_awarded\": true\n    },\n    {\n      \"id\": \"research\",\n      \"weight_fraction\": \"1\",\n      \"units\": \"333333333333333333\",\n      \"amount\": \"0.333333333333333333\",\n      \"rounding_unit_awarded\": false\n    },\n    {\n      \"id\": \"review\",\n      \"weight_fraction\": \"1\",\n      \"units\": \"333333333333333333\",\n      \"amount\": \"0.333333333333333333\",\n      \"rounding_unit_awarded\": false\n    }\n  ],\n  \"demo\": \"Illustrative task roles, not recipient identities; no addresses or payments.\"\n}\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardtarget",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardtarget/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardtarget/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 6,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "test_cli_roundtrip (__main__.RewardTargetTests.test_cli_roundtrip) ... ok\ntest_complete_recomputation_and_tamper (__main__.RewardTargetTests.test_complete_recomputation_and_tamper) ... ok\ntest_no_match_and_boundary (__main__.RewardTargetTests.test_no_match_and_boundary) ... ok\ntest_nonmonotonic_demo (__main__.RewardTargetTests.test_nonmonotonic_demo) ... ok\ntest_seeded_oracle (__main__.RewardTargetTests.test_seeded_oracle) ... ok\ntest_strict_limits_and_targets (__main__.RewardTargetTests.test_strict_limits_and_targets) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.682s\n\nOK\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardtarget",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardtarget/rewardtarget.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardtarget/rewardtarget.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "273e879ad4cd5441d49eacf67847352c67d439913d8cb920cec0f635a6c6075f",
+      "evidence": "   {\n        \"first_budget_units\": \"25\",\n        \"last_budget_units\": \"25\"\n      },\n      {\n        \"first_budget_units\": \"28\",\n        \"last_budget_units\": \"28\"\n      }\n    ],\n    \"scope\": \"complete consecutive-unit search only within this window; arithmetic, not entitlement or payment\"\n  },\n  \"verification\": {\n    \"schema\": \"rewardtarget-verification-v1\",\n    \"result\": \"verified every budget in the stated window\",\n    \"search_sha256\": \"f76f826f6486791e820d71fc8eac9cfdf515b66fde8b381818caa0395ccbefc0\",\n    \"budgets_checked\": 4,\n    \"first_match\": {\n      \"budget_units\": \"25\",\n      \"budget_amount\": \"0.000000000000000025\",\n      \"allocation_sha256\": \"242019588cdecea60c482eca654f3531b63fe37dcb6826fd2f9f29202906974d\",\n      \"target_shares\": [\n        {\n          \"id\": \"d\",\n          \"units\": \"3\"\n        },\n        {\n          \"id\": \"e\",\n          \"units\": \"3\"\n        }\n      ]\n    }\n  }\n}\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardwindow",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardwindow/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardwindow/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 5,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "test_cli_roundtrip (__main__.WindowTests.test_cli_roundtrip) ... ok\ntest_limits (__main__.WindowTests.test_limits) ... ok\ntest_paradox_and_verification (__main__.WindowTests.test_paradox_and_verification) ... ok\ntest_seeded_consecutive_conservation (__main__.WindowTests.test_seeded_consecutive_conservation) ... ok\ntest_tampering_rejected (__main__.WindowTests.test_tampering_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.507s\n\nOK\n"
+    },
+    {
+      "line": 3,
+      "tool": "rewardwindow",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardwindow/rewardwindow.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/rewardwindow/rewardwindow.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "097dec8b5efdb8d15eb3c4b9112370e88410e775156180aa20e90a96622cafe1",
+      "evidence": " }\n    ],\n    \"reversals\": [\n      {\n        \"at_budget_units\": \"26\",\n        \"contributors_losing\": [\n          {\n            \"id\": \"d\",\n            \"before_units\": \"3\",\n            \"after_units\": \"2\"\n          },\n          {\n            \"id\": \"e\",\n            \"before_units\": \"3\",\n            \"after_units\": \"2\"\n          }\n        ]\n      }\n    ],\n    \"scope\": \"every consecutive atomic-unit budget in this window; arithmetic only, no payment or entitlement\"\n  },\n  \"verification\": {\n    \"schema\": \"rewardwindow-verification-v1\",\n    \"result\": \"verified every atomic-unit transition in window\",\n    \"scan_sha256\": \"96dc20f6c84be1687918e94e7be48fbdd61b0455973ac703015b0cdc4a0434f8\",\n    \"transitions_with_reversal\": 1,\n    \"start_budget_units\": \"25\",\n    \"end_budget_units\": \"28\",\n    \"scope\": \"every consecutive atomic-unit budget in this window; arithmetic only, no payment or entitlement\"\n  }\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "apidelta",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/apidelta/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "gathering/audit_apidelta_35.py"
+      ],
+      "adaptation": "Unchanged suite; TemporaryDirectory redirected from line folder to test/scratch/audit-lines-3-4-35.",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 44,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "............................................\n----------------------------------------------------------------------\nRan 44 tests in 0.364s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "apidelta",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/apidelta/apidelta.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/apidelta/apidelta.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "e411daff52e54d64107acb40fc08d5f054e94c74d5d411875946f5a641d5c6db",
+      "evidence": "ns_compared\": 4,\n  \"findings\": [\n    {\n      \"severity\": \"breaking\",\n      \"code\": \"operation_removed\",\n      \"location\": \"/paths/~1requests~1capabilities/get\",\n      \"message\": \"Existing operation is no longer described.\"\n    },\n    {\n      \"severity\": \"breaking\",\n      \"code\": \"request_property_required\",\n      \"location\": \"/paths/~1requests~1quote/post/requestBody/content/application~1json/schema/required/clientVersion\",\n      \"message\": \"New request property is mandatory.\"\n    }\n  ],\n  \"limits\": \"Static conservative subset analysis, not a full OpenAPI validator or proof of runtime compatibility. Review findings are unresolved.\",\n  \"demo\": \"Synthetic breaking revision of a real captured public description; not an observed service change.\",\n  \"baseline_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"baseline_source\": \"https://api.imd.fun/openapi.json\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "authcheck",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/authcheck/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/authcheck/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 13,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": ".............\n----------------------------------------------------------------------\nRan 13 tests in 12.351s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "authcheck",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/authcheck/authcheck.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/authcheck/authcheck.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "37de45f0257230f48ca701bc92464f322f73afdabe53e5452b425c3073d0ac25",
+      "evidence": "lternative using only its declared schemes and scopes/roles. This is a symbolic requirement witness, not a credential or runtime authorization test.\"\n    },\n    {\n      \"severity\": \"review\",\n      \"code\": \"security_changed\",\n      \"location\": \"/paths/~1requests~1capabilities/get/security\",\n      \"message\": \"Effective security policy changed.\"\n    }\n  ],\n  \"limits\": \"Static conservative subset analysis, not a full OpenAPI validator or proof of runtime compatibility. Review findings are unresolved.\",\n  \"extension\": \"authcheck-v1 (includes dependcheck and all earlier line 4 analyzers)\",\n  \"security_alternative_comparisons\": 12,\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"baseline_source\": \"https://api.imd.fun/openapi.json\",\n  \"demo\": \"Hypothetically remove the anonymous override from the captured capabilities operation; no operation called.\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "boundcheck",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/boundcheck/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/boundcheck/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 11,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.277s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "boundcheck",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/boundcheck/boundcheck.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/boundcheck/boundcheck.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "d5c865fff17c024077f4bfae75637218ef513107dd276b6e16edbbc948d2bead",
+      "evidence": "breaking\",\n      \"code\": \"size_bound_incompatible\",\n      \"location\": \"/paths/~1requests~1quote/post/requestBody/content/application~1json/schema/properties/clientNote/maxLength\",\n      \"message\": \"Request size bound tightened.\"\n    },\n    {\n      \"severity\": \"review\",\n      \"code\": \"schema_constraint_changed\",\n      \"location\": \"/paths/~1requests~1quote/post/requestBody/content/application~1json/schema/properties/clientNote/maxLength\",\n      \"message\": \"Constraint changed; this rule needs human review.\"\n    }\n  ],\n  \"limits\": \"Static conservative subset analysis, not a full OpenAPI validator or proof of runtime compatibility. Review findings are unresolved.\",\n  \"extension\": \"boundcheck-v1\",\n  \"demo\": \"Hypothetical clientNote bound change in a captured real public API; no service operation called.\",\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "constcheck",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/constcheck/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/constcheck/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 11,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.302s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "constcheck",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/constcheck/constcheck.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/constcheck/constcheck.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "4d54f4b58827031d3708e1170f72c219282669f0c3475643a60835315656f937",
+      "evidence": "ocation\": \"/paths/~1requests~1quote/post/requestBody/content/application~1json/schema/properties/clientMode24/const\",\n      \"message\": \"New request const excludes a formerly allowed value.\"\n    },\n    {\n      \"severity\": \"review\",\n      \"code\": \"schema_constraint_changed\",\n      \"location\": \"/paths/~1requests~1quote/post/requestBody/content/application~1json/schema/properties/clientMode24/const\",\n      \"message\": \"Constraint changed; this rule needs human review.\"\n    }\n  ],\n  \"limits\": \"Static conservative subset analysis, not a full OpenAPI validator or proof of runtime compatibility. Review findings are unresolved.\",\n  \"extension\": \"constcheck-v1 (includes multiplecheck-v1 and boundcheck-v1)\",\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"demo\": \"Hypothetical fixed clientMode24 change in the captured public IMD API. No operation called.\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "dependcheck",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/dependcheck/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/dependcheck/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 11,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "...........\n----------------------------------------------------------------------\nRan 11 tests in 1.602s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "dependcheck",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/dependcheck/dependcheck.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/dependcheck/dependcheck.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "035e932188bc50deda683a5f6e7068d364b44d738605a62ed41309fd623041d4",
+      "evidence": "\"/paths/~1requests~1quote/post/requestBody/content/application~1json/schema/dependentRequired/clientReference\",\n      \"message\": \"New request dependency on \\\"clientReference\\\" requires [\\\"clientContext\\\"], not implied by the old request presence rules. Other constraints may make the case unreachable.\"\n    }\n  ],\n  \"limits\": \"Static conservative subset analysis, not a full OpenAPI validator or proof of runtime compatibility. Review findings are unresolved.\",\n  \"extension\": \"dependcheck-v1 (includes uniquecheck, constcheck, multiplecheck, boundcheck)\",\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"demo\": \"Hypothetical dependency added to the captured public IMD description; no operation called.\",\n  \"illustrative_presence_change\": \"clientReference now also requires clientContext; values and other required fields are outside this illustration.\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "fallbackheaders",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/fallbackheaders/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/fallbackheaders/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 9,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.061s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "fallbackheaders",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/fallbackheaders/fallbackheaders.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/fallbackheaders/fallbackheaders.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "0fb67faebf0aef958e31df6fcd320c51320bb0826befef347fec554862a25ac6",
+      "evidence": "elected response.\"\n    }\n  ],\n  \"limits\": \"Static conservative subset analysis, not a full OpenAPI validator or proof of runtime compatibility. Review findings are unresolved.\",\n  \"extension\": \"fallbackheaders-v1 (includes statuscheck and earlier analyzers)\",\n  \"status_visits\": 2500,\n  \"selector_groups\": [\n    {\n      \"operation\": \"/paths/~1openapi.json/get\",\n      \"old_selector\": \"2XX\",\n      \"new_selector\": \"200\",\n      \"statuses\": [\n        200\n      ]\n    }\n  ],\n  \"remapped_header_pairs\": 1,\n  \"header_visits\": 5,\n  \"header_scope\": \"common inline top-level operations; changed effective status selectors with both responses present\",\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"baseline_source\": \"https://api.imd.fun/openapi.json\",\n  \"demo\": \"Hypothetical 200 override of a 2XX response on a saved IMD path; no described endpoint is called.\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "headercheck",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/headercheck/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/headercheck/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 15,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "...............\n----------------------------------------------------------------------\nRan 15 tests in 0.039s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "headercheck",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/headercheck/headercheck.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/headercheck/headercheck.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "abf20fdfc1401aac4472dbd16d624bfe16ad16e2809df152d9c198c5ee45152c",
+      "evidence": " \"breaking\",\n      \"code\": \"response_header_not_guaranteed\",\n      \"location\": \"/paths/~1openapi.json/get/responses/200/headers/x-worker-budget/required\",\n      \"message\": \"An old required response header may now be omitted.\"\n    }\n  ],\n  \"limits\": \"Static conservative subset analysis, not a full OpenAPI validator or proof of runtime compatibility. Review findings are unresolved.\",\n  \"extension\": \"headercheck-v1 (includes idcheck and all earlier line 4 analyzers)\",\n  \"header_scope\": \"response headers of common inline paths operations; exact matching status keys\",\n  \"header_visits\": 4,\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"baseline_source\": \"https://api.imd.fun/openapi.json\",\n  \"demo\": \"Real saved paths with a hypothetical required response header made optional; both header declarations are invented in memory, no endpoint contacted.\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "idcheck",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/idcheck/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/idcheck/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 13,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": ".............\n----------------------------------------------------------------------\nRan 13 tests in 0.363s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "idcheck",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/idcheck/idcheck.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/idcheck/idcheck.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "05871ef602a6df7aec3b2aeea40feccc1b1748159715b5b06d1d9a2bb2d9919e",
+      "evidence": "nged.\"\n    },\n    {\n      \"severity\": \"breaking\",\n      \"code\": \"operation_id_changed\",\n      \"location\": \"/paths/~1openapi.json/get/operationId\",\n      \"message\": \"An existing operationId was removed or changed. Clients generated using it may lose their callable symbol even if the HTTP endpoint still works.\"\n    }\n  ],\n  \"limits\": \"Static conservative subset analysis, not a full OpenAPI validator or proof of runtime compatibility. Review findings are unresolved.\",\n  \"extension\": \"idcheck-v1 (includes servercheck and all earlier line 4 analyzers)\",\n  \"identifier_scope\": \"inline top-level paths operations; callbacks and webhooks excluded\",\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"baseline_source\": \"https://api.imd.fun/openapi.json\",\n  \"demo\": \"One identifier renamed hypothetically in the saved public description; no endpoint contacted.\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "multiplecheck",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/multiplecheck/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/multiplecheck/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 16,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "................\n----------------------------------------------------------------------\nRan 16 tests in 1.754s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "multiplecheck",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/multiplecheck/multiplecheck.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/multiplecheck/multiplecheck.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "f9b516cd68702f981f257eb88026f32dee945b25a97579dcdb210cead79067ca",
+      "evidence": "Body/content/application~1json/schema/properties/batchSize/multipleOf\",\n      \"message\": \"New request multiple excludes formerly accepted numeric values.\"\n    },\n    {\n      \"severity\": \"review\",\n      \"code\": \"schema_constraint_changed\",\n      \"location\": \"/paths/~1requests~1quote/post/requestBody/content/application~1json/schema/properties/batchSize/multipleOf\",\n      \"message\": \"Constraint changed; this rule needs human review.\"\n    }\n  ],\n  \"limits\": \"Static conservative subset analysis, not a full OpenAPI validator or proof of runtime compatibility. Review findings are unresolved.\",\n  \"extension\": \"multiplecheck-v1 (includes boundcheck-v1)\",\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"demo\": \"Hypothetical batchSize change in the captured public IMD API. A formerly valid value 2 is rejected by the new multiple 3. No operation called.\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "oauthcheck",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/oauthcheck/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/oauthcheck/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 16,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "................\n----------------------------------------------------------------------\nRan 16 tests in 0.335s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "oauthcheck",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/oauthcheck/oauthcheck.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/oauthcheck/oauthcheck.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "c031ed4fdf99f101ce4f07012aebf6f0d050df9f23fabc44b102c7110c6b5404",
+      "evidence": " \"location\": \"/paths/~1requests~1quote/post/security\",\n      \"message\": \"Old effective alternative 0 has no transport-compatible new alternative retaining every old OAuth flow that offered its required scopes, with identical declared endpoint URLs and those scopes. Existing acquisition or refresh integrations may fail; no endpoint or credential was tested.\"\n    }\n  ],\n  \"limits\": \"Static conservative subset analysis, not a full OpenAPI validator or proof of runtime compatibility. Review findings are unresolved.\",\n  \"extension\": \"oauthcheck-v1 (includes schemecheck and earlier line 4 analyzers)\",\n  \"oauth_alternative_comparisons\": 9,\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"baseline_source\": \"https://api.imd.fun/openapi.json\",\n  \"demo\": \"Hypothetical OAuth token URL migration added to the bundled public description; no endpoint called.\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "paramcheck",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/paramcheck/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/paramcheck/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 14,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "..............\n----------------------------------------------------------------------\nRan 14 tests in 0.042s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "paramcheck",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/paramcheck/paramcheck.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/paramcheck/paramcheck.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "9248ce7870d1348fecb6dab18c72b883e2315286d6b3e98350ebd2ef3a5a1b78",
+      "evidence": "d\",\n      \"location\": \"/paths/~1openapi.json/get/parameters/query:workerTags33/explode\",\n      \"message\": \"Effective parameter explode changed; previously serialized values may be interpreted differently. Check the concrete value domain.\"\n    }\n  ],\n  \"limits\": \"Static conservative subset analysis, not a full OpenAPI validator or proof of runtime compatibility. Review findings are unresolved.\",\n  \"extension\": \"paramcheck-v1 (includes headercheck and all earlier analyzers)\",\n  \"parameter_visits\": 8,\n  \"parameter_scope\": \"effective parameters of common inline top-level paths operations\",\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"baseline_source\": \"https://api.imd.fun/openapi.json\",\n  \"demo\": \"Hypothetical optional array parameter on a real saved IMD operation: workerTags33=a&workerTags33=b becomes workerTags33=a,b. No endpoint contacted.\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "schemecheck",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/schemecheck/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/schemecheck/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 11,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.573s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "schemecheck",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/schemecheck/schemecheck.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/schemecheck/schemecheck.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "1469fc1e10a4a7eee4adcf596eb10dd86f01a49b908a9f3ae3df86d2a32bf26e",
+      "evidence": "patible\",\n      \"location\": \"/paths/~1requests~1{id}~1submit/post/security\",\n      \"message\": \"Old effective alternative 1 has no new alternative preserving both its obligations and declared scheme type, API-key location/name or HTTP authentication scheme. Existing request construction may fail; no credential was tested.\"\n    }\n  ],\n  \"limits\": \"Static conservative subset analysis, not a full OpenAPI validator or proof of runtime compatibility. Review findings are unresolved.\",\n  \"extension\": \"schemecheck-v1 (includes authcheck and all earlier line 4 analyzers)\",\n  \"security_alternative_comparisons\": 11,\n  \"security_transport_comparisons\": 14,\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"baseline_source\": \"https://api.imd.fun/openapi.json\",\n  \"demo\": \"Hypothetically change the captured HTTP Bearer scheme to Basic; no API operation called.\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "servercheck",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/servercheck/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/servercheck/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 15,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "...............\n----------------------------------------------------------------------\nRan 15 tests in 0.351s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "servercheck",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/servercheck/servercheck.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/servercheck/servercheck.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "4553b1796d90fec83e69113dfacdcedbcdbf9258f434218cdff332243b5cc983",
+      "evidence": "erver_defaults_changed\",\n      \"location\": \"/paths/~1openapi.json/get/servers\",\n      \"message\": \"Effective default-substituted server references changed; review client selection behavior.\"\n    },\n    {\n      \"severity\": \"review\",\n      \"code\": \"servers_changed\",\n      \"location\": \"/paths/~1openapi.json/get/servers\",\n      \"message\": \"Effective servers policy changed.\"\n    }\n  ],\n  \"limits\": \"Static conservative subset analysis, not a full OpenAPI validator or proof of runtime compatibility. Review findings are unresolved.\",\n  \"extension\": \"servercheck-v1 (includes oauthcheck and earlier line 4 analyzers)\",\n  \"server_expansion_work\": 2,\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"baseline_source\": \"https://api.imd.fun/openapi.json\",\n  \"demo\": \"Hypothetical operation server migration of the saved public description; no endpoint contacted.\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "statuscheck",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/statuscheck/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/statuscheck/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 22,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "......................\n----------------------------------------------------------------------\nRan 22 tests in 0.093s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "statuscheck",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/statuscheck/statuscheck.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/statuscheck/statuscheck.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "00f2c82c82288fc15dca507bc713ef3293b753fda54f42a3d93fd68860263f2c",
+      "evidence": "e\": \"Response can produce types old clients did not expect.\"\n    }\n  ],\n  \"limits\": \"Static conservative subset analysis, not a full OpenAPI validator or proof of runtime compatibility. Review findings are unresolved.\",\n  \"extension\": \"statuscheck-v1 (includes paramcheck and earlier analyzers)\",\n  \"status_visits\": 2500,\n  \"selector_groups\": [\n    {\n      \"operation\": \"/paths/~1openapi.json/get\",\n      \"old_selector\": \"2XX\",\n      \"new_selector\": \"200\",\n      \"statuses\": [\n        200\n      ]\n    }\n  ],\n  \"status_scope\": \"100..599; common inline top-level operations; exact > class > default\",\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"baseline_source\": \"https://api.imd.fun/openapi.json\",\n  \"demo\": \"Hypothetical 200 integer override of a 2XX string on a real saved IMD path. Response maps are invented in memory; no API operation is called.\"\n}\n"
+    },
+    {
+      "line": 4,
+      "tool": "uniquecheck",
+      "kind": "check",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/uniquecheck/selftest.py"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/uniquecheck/selftest.py"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 10,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": "..........\n----------------------------------------------------------------------\nRan 10 tests in 0.373s\n\nOK\n"
+    },
+    {
+      "line": 4,
+      "tool": "uniquecheck",
+      "kind": "demo",
+      "documented_command": [
+        "python3",
+        "-B",
+        "line-4/tools/uniquecheck/uniquecheck.py",
+        "demo"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/uniquecheck/uniquecheck.py",
+        "demo"
+      ],
+      "adaptation": null,
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "unittest_cases": 0,
+      "stdout_sha256": "6cb3aa195095f7fceb0c373c68bb2154b1374a49910ce3565b330e4336161aab",
+      "evidence": "ew request uniqueness rule can reject arrays containing duplicate values.\"\n    },\n    {\n      \"severity\": \"review\",\n      \"code\": \"schema_constraint_changed\",\n      \"location\": \"/paths/~1requests~1quote/post/requestBody/content/application~1json/schema/properties/clientTags25/uniqueItems\",\n      \"message\": \"Constraint changed; this rule needs human review.\"\n    }\n  ],\n  \"limits\": \"Static conservative subset analysis, not a full OpenAPI validator or proof of runtime compatibility. Review findings are unresolved.\",\n  \"extension\": \"uniquecheck-v1 (includes constcheck-v1, multiplecheck-v1, boundcheck-v1)\",\n  \"capture_sha256\": \"be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a\",\n  \"demo\": \"Hypothetical uniqueness change in the captured public IMD description; no operation called.\",\n  \"illustrative_old_request\": {\n    \"clientTags25\": [\n      \"urgent\",\n      \"urgent\"\n    ]\n  }\n}\n"
+    }
+  ]
+}
