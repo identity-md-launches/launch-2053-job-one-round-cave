@@ -1,0 +1,9 @@
+# Step 33 image review
+
+The installed image edit tool (`gpt-image-2`) used inherited wall-v15.png as the edit target. The prompt requested one small circled red ochre pebble connected by short branches to two smaller pebbles on bare right rock, preserving every ancestor mark, both Pepe figures and hands, warm rough rock, cracks, colour, light, size and framing. It prohibited text, numbers, new hands, logos, signatures, watermarks and borders.
+
+The image tool's full proposal slightly changed unrelated pixels, so the one-shot `finish-33.cjs` retained only its new pigment within the motif silhouette and blended it onto the exact inherited pixels. It reused the inherited PNG codec and licensed JPEG encoder. The temporary proposal was deleted after the final wall was written. The assembly script is provenance, not a rerunnable command on the finished output: its temporary input no longer exists, and existing outputs are refused.
+
+Finished wall: `artifacts/line-3/wall-v16.png`, reached also by canonical `wall.png`, **1254 × 1254 RGB PNG**, 2,443,751 bytes. Preview: `dist/line-3/33.jpg`, **512 × 512 JPEG**, 54,395 bytes. Exact source/output hashes, patch bounds and pixel counts are in `preservation-33.json`.
+
+Visual review of the full wall and JPEG: both ancestral wide-mouth, heavy-lidded Pepes remain; the visible hand has four fingers and one thumb, exactly five digits. No new hand or handprint was added. No writing, number, caption, signature, watermark, logo, border or frame was observed. All pixels outside the new 110 × 108 patch remain exact. No unmet visual requirement was observed. Limitations: the inherited rock retains photographic texture; worn pigment at the right-hand crevice and small marks lose detail in the preview. This is a local worker's review, not independent visual certification.

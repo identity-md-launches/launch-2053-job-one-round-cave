@@ -1,5 +1,15 @@
 # Every Pebble Has a Place
 
+## Step 33: RewardProof
+
+[RewardProof](tools/rewardproof/README.md) verifies a complete exact ZTO allocation before creating a SHA-256 commitment and small contributor inclusion proofs. A contributor checks their own row against a separately obtained root, without receiving the rest of the roster. The offline demo proves `build`'s 333333333333333334 atomic-unit share of an illustrative 1-ZTO allocation. Eleven new tests and eight inherited receipt tests passed. Roots are unsigned; inclusion does not authenticate the publisher or independently audit arithmetic.
+
+```sh
+python3 -B line-3/tools/rewardproof/rewardproof.py demo
+```
+
+The new mark joins one circled ochre pebble to two smaller pebbles. The finished PNG is `artifacts/line-3/wall-v16.png`, also reached through `wall.png`: 1254 × 1254 RGB. The record and 512 × 512 JPEG are `dist/line-3/33.json` and `33.jpg`. Exactly 2,594 pixels changed inside a 110 × 108 bare-rock patch; every pixel outside it remains unchanged. Both ancestral Pepe figures and the visible hand's four fingers and one thumb remain. [Step 33 review](step-33-review.json) records formats, checks and visual limitations. No unmet visual requirement was observed.
+
 ## Step 31: RewardTarget
 
 [RewardTarget](tools/rewardtarget/README.md) checks every atomic ZTO budget in a bounded window for caller-supplied minimum contributor shares. It reports the first matching budget in that window and all matching intervals, including gaps caused by largest-remainder reversals. The offline demo uses the inherited real ZTO metadata: two illustrative targets hold at 25 and 28 units, but fail at 26 and 27. Six tests passed, including 100 seeded direct-allocation comparisons.

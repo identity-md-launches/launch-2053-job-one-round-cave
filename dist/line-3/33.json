@@ -1,0 +1,12 @@
+{
+  "name": "The Bound Pebble",
+  "image": "https://api.imd.fun/artifacts/41b4b7aa6de43ab9186e761bdb065bc551640ec93f0e8d61b7fbe407e8a5c07e",
+  "attributes": [
+    {"trait_type": "Cave", "value": "Lava"},
+    {"trait_type": "Wall", "value": "Line 3"},
+    {"trait_type": "Number", "value": 33},
+    {"trait_type": "Left behind", "value": "RewardProof"},
+    {"trait_type": "Meaning", "value": "Pepe binds one exact share to the whole without carrying every pebble."},
+    {"trait_type": "One thing", "value": "Exact ZTO reward allocation"}
+  ]
+}

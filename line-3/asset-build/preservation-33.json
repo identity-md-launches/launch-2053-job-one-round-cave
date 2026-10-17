@@ -1,0 +1,28 @@
+{
+  "source": "artifacts/line-3/wall-v15.png",
+  "source_sha256": "5fddc2105f66b94fbc8db4e07a3848032939245ab1f6c3c5cba6f16a5f469696",
+  "generated_sha256": "0f57806263b56e0fa994ef59849bea48d85d6204f26e49b7eb79cc713953f7cc",
+  "output": "artifacts/line-3/wall-v16.png",
+  "output_sha256": "41b4b7aa6de43ab9186e761bdb065bc551640ec93f0e8d61b7fbe407e8a5c07e",
+  "patch_xywh": [
+    1018,
+    468,
+    110,
+    108
+  ],
+  "changed_pixels": 2594,
+  "changed_pixels_outside_patch": 0,
+  "png_dimensions": [
+    1254,
+    1254
+  ],
+  "png_format": "RGB PNG",
+  "png_bytes": 2443751,
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "jpeg_format": "JPEG",
+  "jpeg_bytes": 54395,
+  "method": "Only generated motif pigment blended onto original rock inside its silhouette; no generated background copied."
+}

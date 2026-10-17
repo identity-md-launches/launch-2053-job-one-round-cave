@@ -1,0 +1,78 @@
+{
+  "new_tests": {
+    "command": [
+      "python3",
+      "-S",
+      "-B",
+      "line-3/tools/rewardproof/selftest.py"
+    ],
+    "exit": 0,
+    "stderr": "...........\n----------------------------------------------------------------------\nRan 11 tests in 1.129s\n\nOK"
+  },
+  "dependency_tests": {
+    "command": [
+      "python3",
+      "-S",
+      "-B",
+      "line-3/tools/rewardreceipt/selftest.py"
+    ],
+    "exit": 0,
+    "stderr": "test_added_claim_rejected (__main__.ReceiptTests.test_added_claim_rejected) ... ok\ntest_canonical_hash_independent_of_key_order (__main__.ReceiptTests.test_canonical_hash_independent_of_key_order) ... ok\ntest_changed_token_capture_rejected (__main__.ReceiptTests.test_changed_token_capture_rejected) ... ok\ntest_changed_unit_rejected (__main__.ReceiptTests.test_changed_unit_rejected) ... ok\ntest_changed_weights_rejected (__main__.ReceiptTests.test_changed_weights_rejected) ... ok\ntest_duplicate_json_keys_rejected_by_reader (__main__.ReceiptTests.test_duplicate_json_keys_rejected_by_reader) ... ok\ntest_exact_zto_receipt (__main__.ReceiptTests.test_exact_zto_receipt) ... ok\ntest_numeric_type_substitution_rejected (__main__.ReceiptTests.test_numeric_type_substitution_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.003s\n\nOK"
+  },
+  "demo": {
+    "command": [
+      "python3",
+      "-S",
+      "-B",
+      "line-3/tools/rewardproof/rewardproof.py",
+      "demo"
+    ],
+    "exit": 0,
+    "root": "8aa3f3332ac36e7572e7798c548d88495e8d73afc416e2673648e54e777f1111",
+    "units": "333333333333333334"
+  },
+  "unchanged": {
+    "goal_byte_identical": true,
+    "older_records_and_previews_unchanged": true,
+    "ancestor_wall_unchanged": true
+  },
+  "delivery": {
+    "records": 33,
+    "new_record": "dist/line-3/33.json",
+    "png": {
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "format": "RGB PNG",
+      "bytes": 2443751,
+      "sha256": "41b4b7aa6de43ab9186e761bdb065bc551640ec93f0e8d61b7fbe407e8a5c07e",
+      "untracked": true
+    },
+    "jpeg": {
+      "dimensions": [
+        512,
+        512
+      ],
+      "format": "JPEG",
+      "bytes": 54395
+    }
+  },
+  "scope": {
+    "all_changes_within_allowed_paths": true,
+    "new_source_files_under_100KB": true
+  },
+  "visual_review": {
+    "inspected": [
+      "artifacts/line-3/wall-v16.png",
+      "dist/line-3/33.jpg"
+    ],
+    "new_hands": 0,
+    "inherited_visible_hand_digits": 5,
+    "unmet_visual_requirements": [],
+    "limitations": [
+      "Inherited photographic rock texture remains.",
+      "Fine pigment detail is reduced in the JPEG."
+    ]
+  }
+}
