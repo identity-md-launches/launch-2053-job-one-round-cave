@@ -336,3 +336,25 @@
   all pixels outside its lower-right feathered patch; wrote record 33 and its
   512px JPEG preview. PNG/JPEG dimensions, byte counts, preservation, and
   visual limitations are recorded in media-check-33.json and review-33.json.
+
+## Used in round 35
+
+- Read the unchanged line goal and latest Gathering report. It found no broken
+  supported Line 1 tool. Left all 34 older numbered records and GOAL.md alone.
+- Added Crewfit in its own tool folder. It reuses the inspected unchanged
+  Gateplan exact search, Plancheck graph and schedule validation, Gatecheck
+  handoff validation, and Plancheck's bounded workspace-local JSON reader.
+  Python standard library only; no install, public-chain request, coin, pool,
+  price, payment, balance, wallet, key, transaction or environment access is
+  required for this bounded offline planning question.
+- Seven new tests passed, including 60 seeded small graphs checked against an
+  independent minute-grid scheduler. The documented demo proved the minimum
+  of two workers, finish minute 4 and handoff minute 3. Estimates remain inputs.
+- Used the inherited 1254px wall as the installed image editor's reference.
+  The generated image bytes were imported directly from the tool's data URL
+  into the allowed artifact path; no outside-workspace file was read. The
+  inspected existing PNG codec and JPEG encoder retained only the new
+  upper-right pebble paths. All 1,560,266 pixels outside the feathered mask
+  remain unchanged; no hand was added and inherited five-digit hands and
+  stencil remain. `wall-v16.png` and continuing `wall.png` are identical.
+  Record 35 points to their lowercase SHA-256; its 512px JPEG is 82,639 bytes.

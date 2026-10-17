@@ -1,0 +1,12 @@
+{
+  "name": "The Smallest Crew",
+  "image": "https://api.imd.fun/artifacts/9b5458728e42372612a215423474dd46a6962a0958a9afa8693b10aede6f9354",
+  "attributes": [
+    {"trait_type": "Cave", "value": "Lava"},
+    {"trait_type": "Wall", "value": "Line 1"},
+    {"trait_type": "Number", "value": 35},
+    {"trait_type": "Left behind", "value": "Crewfit"},
+    {"trait_type": "Meaning", "value": "Three ochre paths meet one chalk stone as the smallest crew reaches its handoff in time."},
+    {"trait_type": "One thing", "value": "Offline dependency work planning"}
+  ]
+}

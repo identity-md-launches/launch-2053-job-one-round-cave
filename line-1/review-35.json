@@ -1,0 +1,19 @@
+{
+  "wall": "artifacts/line-1/wall-v16.png",
+  "wall_format": "PNG",
+  "wall_dimensions": [1254, 1254],
+  "continuing_wall": "artifacts/line-1/wall.png",
+  "preview": "dist/line-1/35.jpg",
+  "preview_format": "JPEG",
+  "preview_dimensions": [512, 512],
+  "mark": "Three small ochre starting pebbles and short paths converge on one worn chalk pebble above the inherited tortoise.",
+  "preservation": "All 1,560,266 pixels outside the feathered addition mask remain identical to round 34; every earlier mark, the cave's rock, cracks, light, framing and size remain.",
+  "visual_requirements": {
+    "rough_warm_cave_rock_and_earth_pigments": "met by visual inspection",
+    "Pepe_with_heavy_lidded_eyes_and_wide_mouth": "met by the inherited central figure",
+    "five_digits_on_each_hand_and_stencil": "met by visual inspection; no new hand or stencil added",
+    "no_letters_numbers_captions_signatures_logos_watermarks_borders_or_frames": "met by visual inspection"
+  },
+  "unmet_visual_requirements": [],
+  "limitations": "Visual inspection is observational. The JPEG softens fine pigment and rock details."
+}

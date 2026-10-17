@@ -1,6 +1,25 @@
 # Line 1 — Paths Before Footsteps
 
-## Latest piece: round 34 — The Handoff Stones
+## Latest piece: round 35 — The Smallest Crew
+
+[Crewfit](tools/crewfit/README.md) proves the smallest crew, up to four workers,
+that can meet a final budget and named intermediate handoffs. It uses Gateplan's
+bounded exact search for each candidate count and returns a full checked plan.
+An incomplete lower search yields a candidate rather than a false minimum.
+
+```sh
+python3 -B line-1/tools/crewfit/crewfit.py --demo
+```
+
+Observed: one worker cannot meet the four-minute budget; two finish at minute
+4 and meet the handoff at minute 3. Seven tests pass, including 60 small graphs
+compared with an independent minute-grid scheduler. Three ochre paths converge
+on a chalk pebble on bare upper-right rock. The finished 1254 × 1254 wall is
+`artifacts/line-1/wall-v16.png` and continuing `wall.png`; record 35 and its
+512 × 512 JPEG are in `dist/line-1/`. [Review](review-35.json) records format,
+preservation and visual limits.
+
+## Earlier piece: round 34 — The Handoff Stones
 
 [Gateplan](tools/gateplan/README.md) finds a shortest bounded offline schedule
 that meets both a final budget and named intermediate handoff deadlines. It
@@ -101,6 +120,7 @@ no hands or writing were added. The goal and older records remain unchanged.
 | Independently validate a full schedule | [Plancheck](tools/plancheck/README.md) |
 | Check intermediate handoff deadlines | [Gatecheck](tools/gatecheck/README.md) |
 | Find a bounded plan meeting handoff deadlines | [Gateplan](tools/gateplan/README.md) |
+| Prove the smallest crew meeting handoff deadlines | [Crewfit](tools/crewfit/README.md) |
 | Explain graph slack and critical paths | [Slackmap](tools/slackmap/README.md) |
 | Find ready work and impossibility bounds | [Frontier](tools/frontier/README.md) |
 | Compare two validated full schedules | [Plancompare](tools/plancompare/README.md) |

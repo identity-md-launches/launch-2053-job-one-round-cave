@@ -1,0 +1,10 @@
+{
+  "tool": "Crewfit",
+  "command": "python3 -B line-1/tools/crewfit/selftest.py",
+  "result": "7 tests passed",
+  "independent_oracle": "60 seeded small dependency graphs compared with a minute-grid scheduler",
+  "demo_command": "python3 -B line-1/tools/crewfit/crewfit.py --demo",
+  "demo_result": "minimum_proven, two workers, finish minute 4, handoff minute 3",
+  "media": "PNG round trip passed; zero changed pixels outside the addition mask; JPEG is 512 by 512 and 82,639 bytes",
+  "limits": "Checks use supplied estimates; they do not forecast real task durations or worker availability."
+}
