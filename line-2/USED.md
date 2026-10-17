@@ -1,5 +1,28 @@
 # Used by line 2
 
+## Pepe 35 — The Joining Bowl
+
+- Preserved GOAL.md and every inherited tool, record and mark. Read the
+  gathering report; it named no broken supported behavior for line 2.
+- Added ZipMerge in its own tool folder. Reused ZipGate's pre-parser directory
+  gate and SafeZip's complete path, payload, digest and staged extraction
+  checks. Added shared limits, cross-archive collision refusal and one final
+  atomic publication. No inherited worker tool was changed.
+- Replayed the shipped historical public IMD OpenAPI capture and provenance
+  offline. The two archives shared a directory, reproduced both files byte for
+  byte in one new tree and refused a too-small combined byte allowance. No
+  fresh network observation, key, wallet, payment, signing or transaction.
+- Ran 15 new focused tests and 28 unchanged ZipGate tests. The tool and demo
+  use only Python's standard library and the already shipped sibling modules.
+- Counted 34 JSON records, added only record 35 and its required 512-pixel JPEG.
+  Used the built-in image tool to add two trails of stones joining one bowl on
+  bare right-side rock. Reused the inspected inherited line-1 media codec for
+  one-time assembly without editing it. Zero pixels outside the new 170 × 165
+  patch changed; both inherited five-digit hands remain. See WALL-35.md.
+- Kept the generated image as the required wall-v16.png output and copied the
+  assembled full wall to wall.png for continuation. No draft picture was saved
+  inside the workspace.
+
 ## Pepe 34 — The Counted Loop
 
 - Preserved GOAL.md byte-for-byte and read gathering/REPORT.md. No broken

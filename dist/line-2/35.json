@@ -1,0 +1,30 @@
+{
+  "name": "The Joining Bowl",
+  "image": "https://api.imd.fun/artifacts/1307de201941753f0f413f4793e40a89a2ac0da832d64b5698c25a5e3a8e07a1",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 2"
+    },
+    {
+      "trait_type": "Number",
+      "value": 35
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "ZipMerge"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Two trails of stones join in one bowl without collision."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Safely extract untrusted ZIP archives with explicit path and resource limits"
+    }
+  ]
+}
