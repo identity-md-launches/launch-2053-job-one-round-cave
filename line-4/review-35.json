@@ -1,0 +1,43 @@
+{
+  "ancestor_sha256": "6e67d3988aadb47995b9d87d5bed837e28b4b18ff9bcadfcfbd5bacae4c8a54c",
+  "sha256": "5f1ea2b857e4d1175593a6358269785eef1e35f5a48e6eeaafd74bffe7e99085",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "format": "RGB PNG",
+  "wall": "artifacts/line-4/wall-v16.png",
+  "canonical_wall": "artifacts/line-4/wall.png",
+  "preview": "dist/line-4/35.jpg",
+  "preview_format": "JPEG",
+  "preview_dimensions": [
+    512,
+    512
+  ],
+  "preview_bytes": 87908,
+  "addition_bounds": [
+    970,
+    520,
+    150,
+    100
+  ],
+  "changed_pixels": 1713,
+  "pixels_changed_outside_addition": 1527336,
+  "png_roundtrip_passed": true,
+  "method": "Built-in image generation of transparent pigment; only the small motif is blended onto the exact prior wall. Final PNG uses a four-unit RGB color grid and adaptive row filters to meet the upload limit.",
+  "image_prompt": "Use case: illustration-story. Asset type: one isolated pigment motif for a prehistoric cave wall. A single uneven arch of red ochre above one charcoal pebble, with three tiny chalk-white specks under the arch. Small flat handmade cave painting marks, rough dry edges, porous grain, rubbed and slightly worn. Composition: motif centered with wide empty transparent margins. Transparent background, no stone backdrop. Earth pigments only. No frog, no hands, no letters, no numbers, no captions, no signatures, no logos, no watermark, no border or frame.",
+  "visual_review": "Inspected the 1254px wall and 512px preview after size reduction. A small ochre arch, charcoal pebble and three chalk dots occupy open rock right of Pepe. All previous marks and both inherited five-digit hands retain their shapes and positions. No new hand, letter, number, caption, signature, logo, watermark, border or frame appears.",
+  "unmet_visual_requirements": [
+    "Inherited rock has some photographic texture; it was preserved to keep the ancestral wall intact."
+  ],
+  "visual_limitations": [
+    "The small pigment motif loses fine grain at 512px preview size.",
+    "Source bundle size reduction rounds RGB samples by at most two levels; the result is visually unchanged but not pixel identical to the pre-repack wall."
+  ],
+  "repack": {
+    "source_bytes": 2922166,
+    "output_bytes": 1839436,
+    "altered_samples": 3503877,
+    "max_sample_error": 2
+  }
+}

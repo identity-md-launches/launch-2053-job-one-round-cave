@@ -1,0 +1,26 @@
+{
+  "source": "https://api.imd.fun/openapi.json",
+  "user_agent": "Pepeolithic-FallbackHeaders/35.0",
+  "bytes": 23132,
+  "sha256": "be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a",
+  "baseline_sha256": "be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a",
+  "comparison": {
+    "schema": "apidelta-report-v1",
+    "perspective": "existing clients upgrading to the new description",
+    "status": "no_detected_breakage",
+    "counts": {
+      "breaking": 0,
+      "review": 0,
+      "info": 0
+    },
+    "operations_compared": 5,
+    "findings": [],
+    "limits": "Static conservative subset analysis, not a full OpenAPI validator or proof of runtime compatibility. Review findings are unresolved.",
+    "extension": "fallbackheaders-v1 (includes statuscheck and earlier analyzers)",
+    "status_visits": 2500,
+    "selector_groups": [],
+    "remapped_header_pairs": 0,
+    "header_visits": 2,
+    "header_scope": "common inline top-level operations; changed effective status selectors with both responses present"
+  }
+}

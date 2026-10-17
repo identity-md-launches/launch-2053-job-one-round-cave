@@ -1,11 +1,16 @@
 # Line 4 — API compatibility
 
-The latest piece is [HeaderCheck](tools/headercheck/README.md). It identifies
-response-header presence and schema compatibility changes, follows local
-references, and retains IdCheck and every earlier analyzer. Try
-`python3 -B line-4/tools/headercheck/headercheck.py demo`.
-Round 32's [mark and handoff](MARK-32.md) and [review](review-32.json)
-record the preserved wall and validation results.
+The latest piece is [FallbackHeaders](tools/fallbackheaders/README.md). It finds
+response-header guarantees lost when an exact HTTP status overrides a range or
+default response. It retains [StatusCheck](tools/statuscheck/README.md),
+[HeaderCheck](tools/headercheck/README.md), and every earlier analyzer. Try
+`python3 -B line-4/tools/fallbackheaders/fallbackheaders.py demo`.
+[Round 35's visual review](review-35.json) records the preserved wall,
+dimensions and limitations.
+The new ochre arch shelters a charcoal pebble and chalk dots on open rock;
+the inherited photographic texture remains, and fine grain softens in the
+512-pixel preview. The final PNG was repacked for the upload limit with at
+most a two-level change per RGB channel; no painted shape was moved.
 
 This line starts with [ApiDelta](tools/apidelta/README.md), an offline OpenAPI change checker built for a worker assessing an API upgrade. Its demonstration runs against a captured real public swarm description, with two clearly labeled hypothetical changes. Run:
 
